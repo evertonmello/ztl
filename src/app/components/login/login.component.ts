@@ -8,14 +8,31 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  inputView = false;
+  emailErrorMsg = ''
+  x = 0
+  inputView = 0;
   constructor(private router: Router  ) { }
 
   ngOnInit() {
   }
 
   showInput(){
-    this.inputView = true;
+    this.inputView = 1;
+
+  }
+
+  validateEmail(){
+    this.inputView = 2;
+    this.x ++;
+    //TODO.. validação no servidor do email....
+    if(this.x ==2 ){
+      this.emailErrorMsg =  "Email não cadastrado para voucher"
+    }
+
+
+    if(this.x ==3 ){
+      this.router.navigateByUrl('/newAccount');
+    }
   }
 
   navgtToNewAccount(){
