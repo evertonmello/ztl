@@ -10,6 +10,7 @@ export class LoginComponent implements OnInit {
 
   emailErrorMsg = ''
   x = 0
+  home = 0
   inputView = 0;
   constructor(private router: Router  ) { }
 
@@ -18,7 +19,9 @@ export class LoginComponent implements OnInit {
 
   showInput(){
     this.inputView = 1;
-
+    this.home++
+    if(this.home == 2){this.router.navigateByUrl('/home');}
+    
   }
 
   validateEmail(){

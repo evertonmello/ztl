@@ -25,7 +25,7 @@ export class NewAccountComponent implements OnInit {
   }
 
   goToHome(){
-    
+    this.router.navigateByUrl('home')
   }
 
 }

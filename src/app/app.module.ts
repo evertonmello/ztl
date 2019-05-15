@@ -10,8 +10,10 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { NewAccountComponent } from './components/new-account/new-account.component';
 import { AddContactsComponent } from './components/add-contacts/add-contacts.component';
+import { HomeComponent } from './components/home/home.component';
 
 const appRoutes: Routes = [
+  { path: 'home',      component: HomeComponent ,data: {animation: 'home'} },
   { path: 'addContacts',      component: AddContactsComponent ,data: {animation: 'addContacts'} },
   { path: 'login',      component: LoginComponent,data: {animation: ''} },
   { path: 'newAccount', component: NewAccountComponent,  data: {animation: ''}},
@@ -25,6 +27,7 @@ const appRoutes: Routes = [
     LoginComponent,
     NewAccountComponent,
     AddContactsComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

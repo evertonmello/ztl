@@ -1,0 +1,52 @@
+
+h3{
+    color: rgba(203,197,196,1);
+    font-size: 16px;
+    margin: 5px 0 5px 0;
+}
+h2{
+    color: white;
+    font-size: 16px;
+}
+
+:host /deep/ .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #F13B40;
+}
+
+:host /deep/ .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+    color: #FFFBF7;
+}
+    
+:host /deep/ .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
+    border-color: rgba(142, 137, 136, 0.267);
+}
+
+:host /deep/ .mat-tab-header-pagination-chevron {
+    border-color: rgba(142, 137, 136, 0.226);
+}
+
+:host /deep/ .mat-tab-label{
+    color:#8E8988;
+}
+
+mat-tab{
+    color: #F13B40;
+}
+:host /deep/.mat-tab-label,:host /deep/.mat-tab-label-active{
+    min-width: 30%!important;
+  //  max-width: 350px!important;
+    padding: 3px!important;
+    margin: 3px!important;
+}
+
+:host /deep/ .mat-tab-label .mat-tab-label-content{
+    font-family: HKGrotesk;
+    font-weight: bold;
+    font-size: 17px;
+}
+.avatar{
+    border-radius: 25px;
+    display: inline-block;
+    vertical-align: sub;
+    margin-right: 8px;
+}
