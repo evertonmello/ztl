@@ -1,0 +1,60 @@
+//progressbar personalize
+:host /deep/ .mat-progress-bar-fill::after {
+    background-color: #F13B40;
+}
+:host /deep/ .mat-progress-bar-background {
+    animation: none;
+    background-color: black;
+    fill: black;
+}
+:host /deep/  .mat-progress-bar-buffer  {
+    background-color: #8E8988!important;
+}
+
+
+
+h1{
+    font-size: 24px;
+    margin: 20px 0 20px 0;
+}
+
+h3{
+    color: rgba(203,197,196,1);
+    font-size: 16px;
+    margin: 5px 0 5px 0;
+}
+h2{
+    color: white;
+    font-size: 16px;
+}
+.btn{
+    width: 312px;
+    height: 40px;
+    background-color: #F13B40;
+    border: 0;
+    border-radius: 6px;
+    margin-top: 10px;
+    /* color: wheat; */
+    color: white;
+}
+
+.termContainer{
+    display: inline-flex;
+    margin: 17px 0 16px 0;
+}
+
+.termText{
+    margin: 0 0 0 10px;
+}
+
+ :host /deep/ .mat-checkbox .mat-checkbox-frame {
+    border-color: rgba(142,137,136,1);
+    border-radius: 5px;
+  }
+ :host /deep/ .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: transparent !important;
+  }
+  
+:host /deep/ .mat-checkbox:not(.mat-checkbox-disabled).mat-accent .mat-checkbox-ripple .mat-ripple-element {
+    background-color: transparent !important;
+ }

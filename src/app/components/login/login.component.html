@@ -1,0 +1,12 @@
+<div class="containerLogin" >
+  <div class="loginBox">
+    <div class="inner">
+        <img class="logo" src="./assets/img/cooltz-logo.png" alt="logo" >
+        <button *ngIf="!inputView" (click)="showInput()" class="btn">Entrar</button>
+        <h2 *ngIf="inputView" class="descLbl desc">Digite seu e-mail</h2>
+        <input *ngIf="inputView"  type="email"> 
+        <h2 *ngIf="inputView" class="descLbl desc">Email não cadastrado para voucher</h2>
+        <button class="btn" (click)="navgtToNewAccount()">Criar nova conta</button>
+    </div>
+  </div>
+</div>

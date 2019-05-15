@@ -1,0 +1,14 @@
+<div class="defaultContainer">
+    <h1>ADICIONAR CONTATOS</h1>
+    <input type="text">
+    <h2>Pesquisar pelo nome, nome de usuário ou telefone.</h2>
+
+    <div class="userContainer" *ngFor="let user of users"  >
+        <img class="avatar" src="./assets/img/profileDft.jpg" alt="profileImage" width="38" height="38"  >
+        <div style="display: inline-block;">
+            <h3 class="name">Matheus Xpto</h3>
+            <h3 class="nick">@Matheus_Xpto</h3>
+        </div>
+        <div class="addBtn"><h2 class="addBtnTxt">Adicionar</h2></div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+html,body{
+    height: 100%;
+    margin: 0;
+}
+body{
+      background-color: #212020;
+      display: contents;
+}
+
+input{
+    box-sizing: border-box;
+    height: 38px;
+    width: 314px;
+    border: 2px solid #8E8988;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.5);
+    background-color: transparent;
+    margin-bottom: 5px;
+    color: #E9E2E1;
+    padding-left: 5px;
+}
+
+.descLbl{
+    height: 19px;
+    width: 49.3px;
+    color: #BDB6B6;
+    font-family: HKGrotesk;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+}
+
+h1,h2,h3{
+    color: #D3CCCC;
+    font-family: HKGrotesk;
+    margin: 0;
+}
+
+.defaultContainer{
+    margin: 24px;
+    max-width: 325px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media screen and (max-width: 320px) { 
+    .defaultContainer{
+        margin: 24px;
+        max-width: 310px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+
+
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@font-face {
+    font-family: HKGrotesk;
+    src: url('./assets/fonts/HKGrotesk-Regular.otf') format("opentype");
+}
