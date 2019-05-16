@@ -27,6 +27,18 @@
     margin-top: 10px;
 }
 
+.alertIcon{
+    position: absolute;
+    color: white;
+    left: 90%;
+    top: 9px;
+    color: #EC7D10;
+}
+
+.iptContainer{
+    position: relative;
+}
+
 .logo{
     margin-left: auto;
     margin-right: auto;
@@ -39,7 +51,13 @@
     width: 100%;
     margin: 0;
     margin-bottom: 3px;
+
+    &.msg{
+        color: #FFE9E2E1;
+    }
 }
+
+
 
 :host /deep/ .mat-checkbox .mat-checkbox-frame {
     border-color: rgba(142,137,136,1);
@@ -52,3 +70,4 @@
 :host /deep/ .mat-checkbox:not(.mat-checkbox-disabled).mat-accent .mat-checkbox-ripple .mat-ripple-element {
     background-color: transparent !important;
 }
+

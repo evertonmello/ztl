@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { Router} from '@angular/router';
 
 @Component({
@@ -8,11 +8,31 @@ import { Router} from '@angular/router';
 })
 export class NewAccountComponent implements OnInit {
 
-  value = 25;
+  upper = new RegExp('[A-Z]', '');
+  lower = new RegExp('[a-z]', '');
+  numb = new RegExp('[0-9]', '');
+
+  password: string = '';
+  iptType:string = 'password'
+  emailErrorMsg = "Este nome de usuário já está sendo usado"
+  passwordVldt = {
+    number:false,
+    upper:false,
+    lower:false,
+    size:false
+  }
+  value = 25;  
   step = 1
   constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  checkPass(event){
+    this.passwordVldt.upper =  this.upper.exec(this.password)? true:false
+    this.passwordVldt.lower =  this.lower.exec(this.password)? true:false
+    this.passwordVldt.number =  this.numb.exec(this.password)? true:false
+    this.passwordVldt.size  = this.password.length > 5? true:false; 
   }
 
   nextStep(){

@@ -1,19 +1,23 @@
-<div class="containerLogin" >
+<div class="containerLogin">
   <div class="loginBox">
     <div class="inner">
-        <img class="logo" src="./assets/img/cooltz-logo.png" alt="logo" >
+<!--       <img class="logo" src="./assets/img/cooltz-logo.png" alt="logo">
+ -->
+      <!-- LOGIN -->
+      <h2 *ngIf="inputView" class="descLbl desc">Digite seu e-mail </h2>
+      <div class="iptContainer">
+          <input *ngIf="inputView" [ngClass]="{'invalidIpt': x ==2}" type="email"  >
+          <i *ngIf="x == 2" class='uil uil-exclamation-triangle alertIcon'  style="color: #EC7D10;" ></i>
+      </div>  
 
-        <!-- LOGIN -->
-        <h2 *ngIf="inputView" class="descLbl desc">Digite seu e-mail</h2>
-        <input *ngIf="inputView"  type="email"> 
-        <h2 *ngIf="inputView" class="descLbl desc">Senha</h2>
-        <input *ngIf="inputView"  type="password"> 
+      <h2 *ngIf="inputView == 1" class="descLbl desc">Senha</h2>
+      <input *ngIf="inputView == 1" type="password">
 
-        <button *ngIf="inputView != 2" (click)="showInput()" class="btn">Entrar</button>
-        
-        <!-- NEWACCOUNT -->
-        <h2 *ngIf="inputView == 2" class="descLbl desc">{{emailErrorMsg}}</h2>
-        <button *ngIf="inputView == 2 || inputView == 0" class="btn" (click)="validateEmail()">Criar nova conta</button>
+      <button *ngIf="inputView != 2" (click)="showInput()" class="btn">Entrar</button>
+
+      <!-- NEWACCOUNT -->
+      <h2 *ngIf="inputView == 2" class="descLbl desc msg">{{emailErrorMsg}}</h2>
+      <button *ngIf="inputView == 2 || inputView == 0" class="btn" (click)="validateEmail()">Criar nova conta</button>
     </div>
   </div>
 </div>

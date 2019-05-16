@@ -19,7 +19,9 @@ input{
     color: #E9E2E1;
     padding-left: 5px;
 }
-
+.invalidIpt{
+    border: 2px solid #EC7D10;
+}
 .descLbl{
     height: 19px;
     width: 49.3px;
@@ -61,3 +63,5 @@ h1,h2,h3{
     font-family: HKGrotesk;
     src: url('./assets/fonts/HKGrotesk-Regular.otf') format("opentype");
 }
+
+

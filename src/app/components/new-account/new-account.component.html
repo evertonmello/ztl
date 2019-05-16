@@ -10,18 +10,20 @@
         <input type="text">
         <h3>Nome de usuário</h3>
         <input type="text">
+        <h2 class="descLbl desc msg">{{emailErrorMsg}}</h2>
+
     </section>
 
     <br>
 
     <!-- SENHA -->
-    <section *ngIf="step == 2">
+    <section *ngIf="step == 2" style="display: inline-block">
         <h3>Senha</h3>
-        <input type="password">
-        <h3>Letra maiúscula</h3>
-        <h3>Letra minúscula</h3>
-        <h3>Número</h3>
-        <h3>6 caracteres</h3>
+        <input type="{{iptType}}" (keyup)="checkPass($event)" [(ngModel)]="password" >
+        <h3><i class='uil uil-check-circle' [ngClass]="{'contains': passwordVldt.upper }" ></i>Letra maiúscula</h3>
+        <h3><i class='uil uil-check-circle' [ngClass]="{'contains': passwordVldt.lower}" ></i>Letra minúscula</h3>
+        <h3><i class='uil uil-check-circle' [ngClass]="{'contains': passwordVldt.number}" ></i>Número</h3>
+        <h3><i class='uil uil-check-circle' [ngClass]="{'contains': passwordVldt.size}" ></i>6 caracteres</h3>
     </section>
 
     <!-- TERMOS -->
