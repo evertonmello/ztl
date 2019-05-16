@@ -48,8 +48,32 @@ h2{
     margin: 17px 0 16px 0;
 }
 
+.eye{
+    position: absolute;
+    right: 3%;
+    top: 7px;
+}
+.disabled{
+    background-color: #373534;
+    pointer-events: none;
+}
+
 .termText{
     margin: 0 0 0 10px;
+}
+
+.iptUser{
+    padding-left: 22px;
+    font-size: 16px;
+}
+
+
+.fixedValue{
+    position: absolute;
+    left: 2%;
+    top: 19%;  
+    color: #E9E2E1;
+    font-family: HKGrotesk;
 }
 
  :host /deep/ .mat-checkbox .mat-checkbox-frame {

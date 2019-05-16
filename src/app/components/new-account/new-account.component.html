@@ -9,17 +9,23 @@
         <h3>Sobrenome</h3>
         <input type="text">
         <h3>Nome de usuário</h3>
-        <input type="text">
+        <div style="position: relative;">
+            <input type="text" class="iptUser">
+            <span class="fixedValue">@</span>
+        </div>
         <h2 class="descLbl desc msg">{{emailErrorMsg}}</h2>
 
     </section>
 
     <br>
-
     <!-- SENHA -->
-    <section *ngIf="step == 2" style="display: inline-block">
+    <section *ngIf="step == 2" >
         <h3>Senha</h3>
-        <input type="{{iptType}}" (keyup)="checkPass($event)" [(ngModel)]="password" >
+        <div style="position: relative;">
+            <input type="{{iptType}}" (keyup)="checkPass($event)" [(ngModel)]="password" >
+            <cooltz-icons (click)="togglePassword()" [name]="'eye'" [width]="23" [color]="'white'" class="eye"></cooltz-icons>
+        </div>
+       
         <h3><i class='uil uil-check-circle' [ngClass]="{'contains': passwordVldt.upper }" ></i>Letra maiúscula</h3>
         <h3><i class='uil uil-check-circle' [ngClass]="{'contains': passwordVldt.lower}" ></i>Letra minúscula</h3>
         <h3><i class='uil uil-check-circle' [ngClass]="{'contains': passwordVldt.number}" ></i>Número</h3>
@@ -38,7 +44,7 @@
     </section>
 
     <div *ngIf="step == 3" class="termContainer">
-            <mat-checkbox ></mat-checkbox>
+            <mat-checkbox [(ngModel)]="termChecked"></mat-checkbox>
             <h3 class="termText" >Eu li e aceito os termos de uso.</h3>            
     </div>
 
@@ -47,7 +53,7 @@
         <h3>Que tal adicionar alguns contatos?</h3>
     </section>
     
-    <button *ngIf="step != 4" class="btn">
+    <button *ngIf="step != 4" class="btn" [ngClass]="{'disabled': step == 3 && !termChecked  }" >
         <h2 (click)="nextStep()">Próximo</h2>
     </button>   
     <button *ngIf="step == 4" class="btn">

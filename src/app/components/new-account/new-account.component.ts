@@ -11,7 +11,7 @@ export class NewAccountComponent implements OnInit {
   upper = new RegExp('[A-Z]', '');
   lower = new RegExp('[a-z]', '');
   numb = new RegExp('[0-9]', '');
-
+  termChecked = false
   password: string = '';
   iptType:string = 'password'
   emailErrorMsg = "Este nome de usuário já está sendo usado"
@@ -21,12 +21,19 @@ export class NewAccountComponent implements OnInit {
     lower:false,
     size:false
   }
+
   value = 25;  
   step = 1
   constructor(private router: Router) { }
 
   ngOnInit() {
+    setTimeout(() => {
+      console.log(this.termChecked)
+
+    }, 4000);
   }
+
+
 
   checkPass(event){
     this.passwordVldt.upper =  this.upper.exec(this.password)? true:false
@@ -38,6 +45,10 @@ export class NewAccountComponent implements OnInit {
   nextStep(){
     this.step = this.step + 1;  
     this.value = this.step * 25;
+  }
+
+  togglePassword(){
+    this.iptType = this.iptType == 'password'? 'text':'password'
   }
 
   goToAddContacts(){

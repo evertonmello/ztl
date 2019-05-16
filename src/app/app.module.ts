@@ -12,6 +12,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NewAccountComponent } from './components/new-account/new-account.component';
 import { AddContactsComponent } from './components/add-contacts/add-contacts.component';
 import { HomeComponent } from './components/home/home.component';
+import { CooltzIconsComponent } from './components/widgets/cooltz-icons/cooltz-icons.component';
 
 const appRoutes: Routes = [
   { path: 'home',      component: HomeComponent ,data: {animation: 'home'} },
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
     NewAccountComponent,
     AddContactsComponent,
     HomeComponent,
+    CooltzIconsComponent
   ],
   imports: [
     BrowserModule,

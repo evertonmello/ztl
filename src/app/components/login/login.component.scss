@@ -16,6 +16,11 @@
     margin-right: auto;
 }
 
+h1{
+    font-size: 16px;
+    color: #FFFBF7;
+}
+
 .btn{
     width: 99%;
     height: 40px;
@@ -54,10 +59,24 @@
 
     &.msg{
         color: #FFE9E2E1;
+        &.hide{
+            display: none;
+        }
     }
 }
 
+.keepTxt{
+    color:#D3CCCC;
+    font-size: 16px;
+}
 
+
+
+.forgotCls{
+    color:#FFFBF7;
+    font-size: 16px;
+    margin-bottom: 13px;
+}
 
 :host /deep/ .mat-checkbox .mat-checkbox-frame {
     border-color: rgba(142,137,136,1);
