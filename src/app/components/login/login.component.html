@@ -7,7 +7,7 @@
       <h2 *ngIf="inputView" class="descLbl desc">Digite seu e-mail </h2>
       <div class="iptContainer">
           <input *ngIf="inputView" [ngClass]="{'invalidIpt': x ==2}" type="email"  >
-          <i *ngIf="x == 2" class='uil uil-exclamation-triangle alertIcon'  style="color: #EC7D10;" ></i>
+          <cooltz-icons class="alertIcon" *ngIf="x == 2" [name]="'warning'" [width]="'18'"></cooltz-icons>
       </div>  
 
       <h2 *ngIf="inputView == 1" class="descLbl desc">Senha</h2>

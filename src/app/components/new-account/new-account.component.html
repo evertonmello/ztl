@@ -25,11 +25,11 @@
             <input type="{{iptType}}" (keyup)="checkPass($event)" [(ngModel)]="password" >
             <cooltz-icons (click)="togglePassword()" [name]="'eye'" [width]="23" [color]="'white'" class="eye"></cooltz-icons>
         </div>
-       
-        <h3><i class='uil uil-check-circle' [ngClass]="{'contains': passwordVldt.upper }" ></i>Letra maiúscula</h3>
-        <h3><i class='uil uil-check-circle' [ngClass]="{'contains': passwordVldt.lower}" ></i>Letra minúscula</h3>
-        <h3><i class='uil uil-check-circle' [ngClass]="{'contains': passwordVldt.number}" ></i>Número</h3>
-        <h3><i class='uil uil-check-circle' [ngClass]="{'contains': passwordVldt.size}" ></i>6 caracteres</h3>
+        
+        <h3><cooltz-icons class="passIcons" [name]="passwordVldt.upper? 'checked':'unchecked'" [width]="'18'"></cooltz-icons>Letra maiúscula</h3>
+        <h3><cooltz-icons class="passIcons" [name]="passwordVldt.lower? 'checked':'unchecked'" [width]="'18'"></cooltz-icons>Letra minúscula</h3>
+        <h3><cooltz-icons class="passIcons" [name]="passwordVldt.number? 'checked':'unchecked'" [width]="'18'"></cooltz-icons>Número</h3>
+        <h3><cooltz-icons class="passIcons" [name]="passwordVldt.size? 'checked':'unchecked'" [width]="'18'"></cooltz-icons>6 caracteres</h3>
     </section>
 
     <!-- TERMOS -->
@@ -37,15 +37,14 @@
         <h3>Termos</h3>
         <div class="terms">
             <h3>Lorem ipsum aliquet taciti metus neque praesent gravida quisque quam, cubilia ullamcorper nullam pretium morbi ut justo malesuada urna, sem euismod duis etiam platea volutpat justo proin. potenti aliquam mauris ultricies ullamcorper congue ultricies donec aliquet gravida viverra diam, id taciti ut nulla vel ac lectus primis vehicula magna, inceptos lobortis laoreet consectetur aenean ligula non interdum ante tortor. duis egestas euismod est per lacinia placerat suspendisse ullamcorper aenean, porta duis porttitor lacinia convallis donec aenean pellentesque amet ullamcorper, dictum lobortis pretium platea elementum senectus potenti elementum. rutrum blandit sollicitudin molestie mauris eros elit cubilia ante ipsum vulputate, leo euismod sit venenatis pretium varius magna aliquam urna ornare, vestibulum curabitur viverra quisque quis mauris elementum libero nunc. 
-
                     Turpis scelerisque vehicula integer egestas feugiat curae laoreet rutrum hac, eros id hendrerit egestas cursus pharetra litora donec quisque porta, molestie proin platea mattis vivamus lectus ornare vel. turpis varius laoreet ante lobortis phasellus tellus quisque per quam nisl vestibulum, diam fermentum senectus placerat taciti sapien sagittis hac fames lectus. rutrum malesuada elit suscipit aptent bibendum platea, lectus libero eget posuere egestas, porttitor vel ornare convallis fusce. hac lorem nibh vestibulum interdum venenatis in quam primis, commodo ullamcorper et fames semper proin pharetra tellus, aenean curabitur neque sit himenaeos porta purus. 
-                </h3>
+            </h3>
         </div>
     </section>
 
     <div *ngIf="step == 3" class="termContainer">
             <mat-checkbox [(ngModel)]="termChecked"></mat-checkbox>
-            <h3 class="termText" >Eu li e aceito os termos de uso.</h3>            
+            <h3 (click)="termChecked = !termChecked" class="termText" >Eu li e aceito os termos de uso.</h3>            
     </div>
 
     <section *ngIf="step == 4">
