@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var navigator; 
 
 @Component({
   selector: 'app-add-contacts',
@@ -7,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddContactsComponent implements OnInit {
 
-  users = [1,2,3,4,5,5,2,3,4,5,5,2,3,4,5,5]
+  users = []
   constructor() { }
 
   ngOnInit() {
+      navigator.contactsPhoneNumbers.list((ctcts) =>{
+          this.users = ctcts;
+          console.log(this.users)
+      })
   }
 
 }

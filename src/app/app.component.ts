@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {RouterOutlet} from '@angular/router';
-import { slide } from './animations'
+import { slide } from './animations';
+declare var device; 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,15 +12,13 @@ import { slide } from './animations'
   ]
 })
 
+
+
 export class AppComponent {
+  
   title = 'app';
   ngOnInit(){
- /*    var applaunchCount = window.localStorage.getItem('firstLaunch');
-    if(!applaunchCount){
-      window.localStorage['firstLaunch'] = 'true';
-    } */
-
-
+   
   }
 
 

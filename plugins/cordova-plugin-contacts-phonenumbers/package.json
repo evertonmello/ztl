@@ -1,0 +1,57 @@
+{
+  "_from": "git+https://github.com/dbaq/cordova-plugin-contacts-phone-numbers.git",
+  "_id": "cordova-plugin-contacts-phonenumbers@0.0.12",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-contacts-phonenumbers",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/dbaq/cordova-plugin-contacts-phone-numbers.git",
+    "rawSpec": "https://github.com/dbaq/cordova-plugin-contacts-phone-numbers.git",
+    "saveSpec": "git+https://github.com/dbaq/cordova-plugin-contacts-phone-numbers.git",
+    "fetchSpec": "https://github.com/dbaq/cordova-plugin-contacts-phone-numbers.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/dbaq/cordova-plugin-contacts-phone-numbers.git#beb21f7f83465b5482d2bd2cbc0a673e7861302f",
+  "_spec": "https://github.com/dbaq/cordova-plugin-contacts-phone-numbers.git",
+  "_where": "C:\\projetos\\cooltz",
+  "author": {
+    "name": "Didier Baquier"
+  },
+  "bugs": {
+    "url": "https://github.com/dbaq/cordova-plugin-contacts-phone-numbers/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-contacts-phonenumbers",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "Cordova Plugin to List Contacts Phone Numbers ",
+  "homepage": "https://github.com/dbaq/cordova-plugin-contacts-phone-numbers#readme",
+  "keywords": [
+    "cordova",
+    "contacts",
+    "list",
+    "phone",
+    "numbers",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "Apache 2.0",
+  "name": "cordova-plugin-contacts-phonenumbers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbaq/cordova-plugin-contacts-phone-numbers.git"
+  },
+  "version": "0.0.12"
+}

@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "io.cordova.cooltz"
+    },
+    "cordova-plugin-contacts-phonenumbers": {
+      "PACKAGE_NAME": "io.cordova.cooltz"
     }
   },
   "dependent_plugins": {}
