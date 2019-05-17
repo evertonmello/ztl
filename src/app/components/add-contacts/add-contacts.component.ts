@@ -1,4 +1,6 @@
 import { Component, OnInit,ApplicationRef } from '@angular/core';
+import {Router} from '@angular/router';
+
 declare var navigator; 
 
 @Component({
@@ -10,10 +12,10 @@ export class AddContactsComponent implements OnInit {
 
   addContactTgl = false;
   contacts = [1,2,3]
-  constructor(private app:ApplicationRef) { }
+  constructor(private app:ApplicationRef,private router:Router) { }
 
   ngOnInit() {
-       navigator.contactsPhoneNumbers.list((contacts) =>{
+/*        navigator.contactsPhoneNumbers.list((contacts) =>{
         //TODO... requisicao com numeros de contataos...retorno ser
 
         //contacts: array de retorno da busca por telefone...
@@ -24,7 +26,7 @@ export class AddContactsComponent implements OnInit {
         
         this.contacts = contacts;
         this.app.tick();
-      }) 
+      })  */
   }
 
   addContact(contact){
@@ -32,6 +34,10 @@ export class AddContactsComponent implements OnInit {
     this.app.tick();
 
     //TODO... serviço para adicionar indivisualmente o contato
+  }
+
+  getIn(){
+    this.router.navigateByUrl('home')
   }
 
 }

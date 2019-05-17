@@ -36,7 +36,7 @@
     <section  *ngIf="step == 3">
         <h3>Termos</h3>
         <div class="terms">
-            <h3>Lorem ipsum aliquet taciti metus neque praesent gravida quisque quam, cubilia ullamcorper nullam pretium morbi ut justo malesuada urna, sem euismod duis etiam platea volutpat justo proin. potenti aliquam mauris ultricies ullamcorper congue ultricies donec aliquet gravida viverra diam, id taciti ut nulla vel ac lectus primis vehicula magna, inceptos lobortis laoreet consectetur aenean ligula non interdum ante tortor. duis egestas euismod est per lacinia placerat suspendisse ullamcorper aenean, porta duis porttitor lacinia convallis donec aenean pellentesque amet ullamcorper, dictum lobortis pretium platea elementum senectus potenti elementum. rutrum blandit sollicitudin molestie mauris eros elit cubilia ante ipsum vulputate, leo euismod sit venenatis pretium varius magna aliquam urna ornare, vestibulum curabitur viverra quisque quis mauris elementum libero nunc. 
+            <h3 class="termsTxt">Lorem ipsum aliquet taciti metus neque praesent gravida quisque quam, cubilia ullamcorper nullam pretium morbi ut justo malesuada urna, sem euismod duis etiam platea volutpat justo proin. potenti aliquam mauris ultricies ullamcorper congue ultricies donec aliquet gravida viverra diam, id taciti ut nulla vel ac lectus primis vehicula magna, inceptos lobortis laoreet consectetur aenean ligula non interdum ante tortor. duis egestas euismod est per lacinia placerat suspendisse ullamcorper aenean, porta duis porttitor lacinia convallis donec aenean pellentesque amet ullamcorper, dictum lobortis pretium platea elementum senectus potenti elementum. rutrum blandit sollicitudin molestie mauris eros elit cubilia ante ipsum vulputate, leo euismod sit venenatis pretium varius magna aliquam urna ornare, vestibulum curabitur viverra quisque quis mauris elementum libero nunc. 
                     Turpis scelerisque vehicula integer egestas feugiat curae laoreet rutrum hac, eros id hendrerit egestas cursus pharetra litora donec quisque porta, molestie proin platea mattis vivamus lectus ornare vel. turpis varius laoreet ante lobortis phasellus tellus quisque per quam nisl vestibulum, diam fermentum senectus placerat taciti sapien sagittis hac fames lectus. rutrum malesuada elit suscipit aptent bibendum platea, lectus libero eget posuere egestas, porttitor vel ornare convallis fusce. hac lorem nibh vestibulum interdum venenatis in quam primis, commodo ullamcorper et fames semper proin pharetra tellus, aenean curabitur neque sit himenaeos porta purus. 
             </h3>
         </div>
@@ -53,13 +53,13 @@
     </section>
     
     <button *ngIf="step != 4" class="btn" [ngClass]="{'disabled': step == 3 && !termChecked  }" >
-        <h2 (click)="nextStep()">Próximo</h2>
+        <h2 class="textButtons" (click)="nextStep()">Próximo</h2>
     </button>   
     <button *ngIf="step == 4" class="btn">
-        <h2 (click)="goToAddContacts()">Adicionar amigos</h2>
+        <h2 class="textButtons" (click)="goToAddContacts()">Adicionar amigos</h2>
     </button>
     <button *ngIf="step == 4" class="btn">
-        <h2 (click)="goToHome()">Entrar na COOLTZ</h2>
+        <h2 class="textButtons" (click)="goToHome()">Entrar na COOLTZ</h2>
     </button>
 
 </div>
