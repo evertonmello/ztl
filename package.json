@@ -25,6 +25,7 @@
     "cordova-android": "^8.0.0",
     "cordova-plugin-contacts-phonenumbers": "git+https://github.com/dbaq/cordova-plugin-contacts-phone-numbers.git",
     "core-js": "^2.5.4",
+    "hammerjs": "^2.0.8",
     "rxjs": "6.0.0",
     "zone.js": "^0.8.26"
   },
