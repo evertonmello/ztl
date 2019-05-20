@@ -6,45 +6,25 @@
 <mat-tab-group>
     <mat-tab label="Música">
         <div class="block1">
-            <div class="feedContainer">
-                    <div class="card">
-                    </div>
-                    <div class="card">
-                    </div>  
-                    <div class="card">
-                    </div>
-                    <div class="card">
-                    </div>
+            <div class="feedContainer"  >
+                    <div  *ngFor="let card of cards" class="card" >
+                    </div>                    
             </div>
         </div>
         <div class="block1">
             <h4 class="favTitle">FAVORITOS DOS MEU AMIGOS</h4>
         </div>
         <div class="block1">
-            <div class="friendsFavorites">
-                <gradient-img  [url]="'/../assets/img/bey.jpg'"></gradient-img>
-                <!-- <div class="favItem">
-                    
-                </div>
-                <div class="favItem">
-                    s
-                </div>
-                <div class="favItem">
-                    s
-                </div> -->
+            <div class="friendsFavorites">    
+                <div *ngFor="let friendsFav of friendsFavs"  [style.background-image]="getBackground(url)" class="favItem">
+                </div>                
             </div> 
         </div>
     </mat-tab>
     <mat-tab label="Cinema">
         <div class="feedContainer">
-            <div class="card">
-            </div>
-            <div class="card">
-            </div>
-            <div class="card">
-            </div>
-            <div class="card">
-            </div>
+            <div  *ngFor="let card of cards" class="card" >
+            </div>  
         </div>
     </mat-tab>
     <mat-tab label="Leitura">
