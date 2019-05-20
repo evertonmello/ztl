@@ -13,6 +13,7 @@ import { NewAccountComponent } from './components/new-account/new-account.compon
 import { AddContactsComponent } from './components/add-contacts/add-contacts.component';
 import { HomeComponent } from './components/home/home.component';
 import { CooltzIconsComponent } from './components/widgets/cooltz-icons/cooltz-icons.component';
+import { GradientImgComponent } from './components/widgets/gradient-img/gradient-img.component';
 
 const appRoutes: Routes = [
   { path: 'home',      component: HomeComponent ,data: {animation: 'home'} },
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
     NewAccountComponent,
     AddContactsComponent,
     HomeComponent,
-    CooltzIconsComponent
+    CooltzIconsComponent,
+    GradientImgComponent
   ],
   imports: [
     BrowserModule,

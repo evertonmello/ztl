@@ -1,5 +1,7 @@
-<div style="margin: 10px 24px 10px 24px">
+<div class="menuContainer" >
     <img class="avatar" src="./assets/img/profileDft.jpg" alt="profileImage" width="30" height="30">
+    <cooltz-icons [name]="'bell'" [width]="'25'" [color]="'white'" class="menuIcons"></cooltz-icons>
+    <cooltz-icons [name]="'search'" [width]="'25'" [color]="'white'" class="menuIcons"  ></cooltz-icons>
 </div>
 <mat-tab-group>
     <mat-tab label="Música">
@@ -20,18 +22,18 @@
         </div>
         <div class="block1">
             <div class="friendsFavorites">
-                <div class="favItem">
-                    <img class="avatar" src="./assets/img/profileDft.jpg" alt="profileImage" width="30" height="30">
+                <div [style.backgroundImage]="'url(/../assets/img/bey.jpg)'"                >
+                    
                 </div>
-                <div class="favItem">
-                    <img class="avatar" src="./assets/img/profileDft.jpg" alt="profileImage" width="30" height="30">
-                </div>
-                <div class="favItem">
-                    s
+                <!-- <div class="favItem">
+                    
                 </div>
                 <div class="favItem">
                     s
                 </div>
+                <div class="favItem">
+                    s
+                </div> -->
             </div> 
         </div>
     </mat-tab>
