@@ -8,6 +8,8 @@
         <div class="block1">
             <div class="feedContainer"  >
                     <div  *ngFor="let card of cards" class="card" >
+
+                        
                     </div>                    
             </div>
         </div>
@@ -32,7 +34,7 @@
     </mat-tab>
 </mat-tab-group>
 <div class="btnPost" >
-    <cooltz-icons (click)="showOverlay()" style="display: table-cell; vertical-align: middle;" [name]="'pen'" [color]="'white'" [width]="'30'"></cooltz-icons>
+    <cooltz-icons (click)="showOverlay();searchToPost(false, 'topic')" style="display: table-cell; vertical-align: middle;" [name]="'pen'" [color]="'white'" [width]="'30'"></cooltz-icons>
 </div>
 <div *ngIf="overlay" (click)="showOverlay()" class="overlay">
     <div class="ovlBoxContainer">
@@ -40,8 +42,9 @@
         <br>
         <h2 class="newPostDesc">O que estou ouvindo agora?</h2>
         <div class="iconOvlContainer">
-            <cooltz-icons class="headphoneIco" [name]="'headphone'" [color]="'white'" [width]="'35'"></cooltz-icons>
+            <cooltz-icons (click)="searchToPost(true, 'listen')"  class="headphoneIco" [name]="'headphone'" [color]="'white'" [width]="'35'"></cooltz-icons>
         </div>
         <h2 class="newPostDescB">Sobre o que você quer falar?</h2>
+
     </div>
 </div>

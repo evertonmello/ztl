@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
-import {Router} from '@angular/router';
+import {Router,ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +14,9 @@ export class HomeComponent implements OnInit {
   cards = [1,2,3,4,5,6]
   friendsFavs = [1,2,3,4,5,6];
   overlay = false;
-  constructor(private _sanitizer: DomSanitizer,private router: Router) {}
+  private static ADADSADS = "AASD";
+  constructor(private _sanitizer: DomSanitizer,private router: Router,private activatedRoute: ActivatedRoute) {
+  }
 
   ngOnInit() {
   }
@@ -31,7 +33,13 @@ export class HomeComponent implements OnInit {
       rgba(0, 0, 0, 0.801) 100%), url(${image})`);
   }
 
+  searchToPost(triggerBtn, content){
+    if(!this.overlay || triggerBtn ){
+      this.router.navigate(['/search'], { queryParams: { opt: content} });
+    }
+  }
+
   search(){
-    this.router.navigateByUrl('search')
+    this.router.navigate(['/search'], { queryParams: { opt: 'search'} });
   }
 }

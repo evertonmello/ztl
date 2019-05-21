@@ -12,7 +12,7 @@
 </div> 
 <div *ngIf="!resultPage"  >
     <back-header (back)="backPage()" [shadow]="true" [title]="'Nova publicação'"></back-header>    
-    <h1 class="title">O QUE VOCÊ ESTÁ BUSCANDO</h1>
+    <h1 class="title">{{content.title}}</h1>
     <div class="iptBox" >
         <input type="text" class="inputResult">
         <cooltz-icons (click)="search()" class="searchIco" [name]="'search'" [width]="'25'" [color]="'white'"></cooltz-icons>
