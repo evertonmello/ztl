@@ -85,12 +85,15 @@
     border-radius: 5px;
     margin-right: 8px;
     box-shadow: rgba(0, 0, 0, 0.151) 2px 3px 5px;
+    position: relative;
 
 }
 
 .favItem:first-child{
     margin-left: 24px;
 }
+
+
 
 .card{
     height: 340px;
@@ -169,4 +172,9 @@ mat-tab{
     display: inline-block;
     vertical-align: sub;
     margin-right: 8px;
+    &.fav{
+        position: absolute;
+        bottom: 9px;
+        left: 8px;
+    }
 }
