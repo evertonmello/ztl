@@ -8,6 +8,7 @@ import { Component, OnInit,Input} from '@angular/core';
 export class ListContactComponent implements OnInit {
 
   @Input()contacts
+  @Input()avatarUrl = './assets/img/profileDft.jpg'
   @Input()showBtn = true
   constructor() { }
 

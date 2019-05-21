@@ -1,15 +1,12 @@
-<div style="height: 100%; width: 100%;background-color: #292727; position: relative;">
-    <img src="./../../../../assets/img/card.jpg" alt="" class="card">
-    <div style="margin: 0 15px 0 15px">
-        <list-contact [contacts]="contacts" [showBtn]="false"></list-contact>
-    </div>
+<div class="main">
+    <img src="./assets/img/a_star.jpg" alt="" class="card">
 
-
-    <div style="   margin: 0 15px;
-    width: 90%;
-    bottom: 15px; position: absolute">
+    <div class="previewContainer">
+        <list-contact [avatarUrl]="'./assets/img/avatar2.jpg'" [contacts]="contacts" [showBtn]="false"></list-contact>
+        <h1>Será que artista tem que se posicionar?</h1>
+        <h2>Nesses tempos , da… ditadura,Mais</h2>
         <h3 class="tag" >CHICO BUARQUE</h3>
-        <cooltz-icons style="float: right"  [name]="'comment'" [width]="15" [color]="'white'"></cooltz-icons>
+        <cooltz-icons class="commentIcon" [name]="'comment'" [width]="18" [color]="'white'"></cooltz-icons>
         <h4 >3</h4>
     </div>
     

@@ -1,5 +1,5 @@
 <div  class="userContainer" *ngFor="let contact of contacts"  >
-    <img class="avatar" src="./assets/img/profileDft.jpg" alt="profileImage" width="38" height="38"  >
+    <img class="avatar" src="{{avatarUrl}}" alt="profileImage" width="38" height="38"  >
     <div class="ctctNameContainer">
          <!--   <h3 class="name">{{contact}}</h3> -->
            <h3 class="name">{{contact.firstName}}</h3>
