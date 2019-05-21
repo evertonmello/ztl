@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,12 +10,17 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browse
 })
 export class HomeComponent implements OnInit {
 
-  url = "/../assets/img/bey.jpg"
+  url = "./assets/img/bey.jpg"
   cards = [1,2,3,4,5,6]
-  friendsFavs = [1,2,3,4,5,6]
-  constructor(private _sanitizer: DomSanitizer) {}
+  friendsFavs = [1,2,3,4,5,6];
+  overlay = false;
+  constructor(private _sanitizer: DomSanitizer,private router: Router) {}
 
   ngOnInit() {
+  }
+
+  showOverlay(){
+    this.overlay = !this.overlay;
   }
 
   getBackground(image) {
@@ -25,5 +31,7 @@ export class HomeComponent implements OnInit {
       rgba(0, 0, 0, 0.801) 100%), url(${image})`);
   }
 
-
+  search(){
+    this.router.navigateByUrl('search')
+  }
 }

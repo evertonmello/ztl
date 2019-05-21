@@ -1,0 +1,76 @@
+@import './../list-contact/list-contact.component.scss';
+
+.main{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.content{
+    margin: 10px 24px;
+}
+
+h1{
+    font-size: 18px;
+}
+ 
+input{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 89%;
+}
+
+.inputResult{
+     margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    float: left;
+    margin-left: 24px; 
+}
+
+.searchIco{
+    position: absolute;
+    right: -10px;
+    top: 6px;
+}
+.iptBox{
+    width: 90%;
+     position: relative;
+     max-width: 400px;
+}
+
+
+.contactsBox{
+    margin: 5px 24px;
+}
+.userContainer{
+    display: inline-block;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.avatar{
+    border-radius: 25px;
+    display: inline-block;
+    vertical-align: sub;
+    margin-right: 8px;
+}
+
+.ctctNameContainer{
+    display: inline-block;
+    vertical-align: super;
+}
+
+.title{
+    text-align: left;
+    margin: 20px 0 28px 24px;
+}
+
+.desc{
+    font-size: 16px;
+    color: #BDB6B6;
+    margin-left: 24px;
+}
+ 

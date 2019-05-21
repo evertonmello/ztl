@@ -11,7 +11,17 @@ declare var navigator;
 export class AddContactsComponent implements OnInit {
 
   addContactTgl = false;
-  contacts = [1,2,3]
+  contacts = [{
+    firstName: 'Everton',
+    nickname: '@tom'
+  },{
+    firstName: 'Everton',
+    nickname: '@tom'
+  },{
+    firstName: 'Everton',
+    nickname: '@tom'
+  }]
+
   constructor(private app:ApplicationRef,private router:Router) { }
 
   ngOnInit() {

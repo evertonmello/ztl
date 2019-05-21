@@ -7,17 +7,7 @@
     
     <h2>Pesquisar pelo nome, nome de usuário ou telefone.</h2>
 
-    <div  class="userContainer" *ngFor="let contact of contacts"  >
-        <img class="avatar" src="./assets/img/profileDft.jpg" alt="profileImage" width="38" height="38"  >
-        <div class="ctctNameContainer">
-               <h3 class="name">{{contact}}</h3>
- <!--            <h3 class="name">{{contact.firstName}}</h3>
-            <h3 class="nick">{{contact.nickname}}</h3> -->
-        </div>
-        <div (click)="addContact(contact)" class="addBtn" [ngClass]="{'added':contact.added}" >
-            <h2 class="addBtnTxt" [ngClass]="{'added':contact.added}">{{contact.added? 'Solicitado':'Adicionar'}}</h2>
-        </div>
-    </div>
+    <list-contact [contacts]="contacts"></list-contact>
 </div>
 <div class="btnContainer">
     <button class="btn" (click)="getIn()" >

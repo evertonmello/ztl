@@ -1,7 +1,7 @@
 <div class="menuContainer" >
     <img class="avatar" src="./assets/img/profileDft.jpg" alt="profileImage" width="30" height="30">
     <cooltz-icons [name]="'bell'" [width]="'25'" [color]="'white'" class="menuIcons"></cooltz-icons>
-    <cooltz-icons [name]="'search'" [width]="'25'" [color]="'white'" class="menuIcons"  ></cooltz-icons>
+    <cooltz-icons (click)="search()" [name]="'search'" [width]="'25'" [color]="'white'" class="menuIcons"  ></cooltz-icons>
 </div>
 <mat-tab-group>
     <mat-tab label="Música">
@@ -32,9 +32,9 @@
     </mat-tab>
 </mat-tab-group>
 <div class="btnPost" >
-    <cooltz-icons style="display: table-cell; vertical-align: middle;" [name]="'pen'" [color]="'white'" [width]="'30'"></cooltz-icons>
+    <cooltz-icons (click)="showOverlay()" style="display: table-cell; vertical-align: middle;" [name]="'pen'" [color]="'white'" [width]="'30'"></cooltz-icons>
 </div>
-<div class="overlay">
+<div *ngIf="overlay" (click)="showOverlay()" class="overlay">
     <div class="ovlBoxContainer">
         <h1>NOVA PUBLICAÇÃO</h1>
         <br>
