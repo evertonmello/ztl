@@ -1,17 +1,16 @@
-.card{
-    width: 100%;    
+.cardImg{
+    width : 100%;    
     min-height: 150px;
-    min-width: 280px;
+    min-width: 28px;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-
 }
 .main{
     height: 100%;
-     width: 100%;
-     background-color: #292727; 
-     position: relative;    
-     border-bottom-left-radius: 6px;
+    width: 281px;
+    background-color: #292727; 
+    position: relative;    
+    border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.151) 2px 3px 5px;
 }
@@ -28,6 +27,7 @@
 
 }
 .previewContainer{
+    width: calc(100% - 30px);
     padding: 0 15px;
     bottom: 15px; 
     position: absolute;
