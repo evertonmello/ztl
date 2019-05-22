@@ -10,19 +10,16 @@ import 'hammerjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  show = false
+
   url = "./assets/img/bey.jpg"
   cards = [1,2,3,4,5,6,7,8]
   friendsFavs = [1,2,3,4,5,6,7,8];
   overlay = false;
-  private static ADADSADS = "AASD";
   constructor(private _sanitizer: DomSanitizer,private router: Router,private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit() {
-/*     setTimeout(() => {
-      this.show = true;
-    }, 2000); */
+
   }
 
   a(dir){
@@ -37,7 +34,7 @@ export class HomeComponent implements OnInit {
       rgba(0, 0, 0, 0.150) 50%,    
       rgba(0, 0, 0, 0.350) 70%,    
       rgba(0, 0, 0, 0.771) 95%,    
-      rgba(0, 0, 0, 0.801) 100%), url(${image})`);
+      rgba(0, 0, 0, 0.801) 100%), url(${image}) `);
   }
 
   searchToPost(triggerBtn, content){
