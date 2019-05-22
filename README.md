@@ -12,6 +12,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
+Script setup: 
+'mkdir dist\cooltz\js | xcopy www\js dist\cooltz\js /O /X /E /H /K | del www | mkdir www | xcopy dist\cooltz www  /O /X /E /H /K
+
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
