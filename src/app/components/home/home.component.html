@@ -4,14 +4,14 @@
     <cooltz-icons [name]="'bell'" [width]="'25'" [color]="'white'" class="menuIcons"></cooltz-icons>
     <cooltz-icons (click)="search()" [name]="'search'" [width]="'25'" [color]="'white'" class="menuIcons"  ></cooltz-icons>
 </div>
-<mat-tab-group>
-    <mat-tab label="Música">
+<mat-tab-group animationDuration="30ms">
+    <mat-tab label="Música" matTabContent>
         <div class="block1">
 <!--             <div class="feedContainer" (swiperight)="a('right feed')" (swipeleft)="a('left')" >
 -->         <div class="feedContainer" >
-                    <div  *ngFor="let card of cards"  class="card"  >
-                        <app-card></app-card>   
-                    </div>                    
+                <div  *ngFor="let card of cards"  class="card"  >
+                    <app-card></app-card>                    
+                </div>                    
             </div>
         </div>
         <div class="block1">
@@ -27,15 +27,15 @@
     </mat-tab>
     <mat-tab label="Cinema">
         <div class="feedContainer" >
-            <div  *ngFor="let card of cards" class="card" (swiperight)="a('right')" (swipeleft)="a('left')"   >
-            </div>  
+             <div  *ngFor="let card of cards" class="card"   >
+            </div>   
         </div>
     </mat-tab>
     <mat-tab label="Leitura">
         <h1>Content 3</h1>
     </mat-tab>
 </mat-tab-group>
-<div class="btnPost" >
+ <div class="btnPost" >
     <cooltz-icons (click)="showOverlay();searchToPost(false, 'topic')" style="display: table-cell; vertical-align: middle;" [name]="'pen'" [color]="'white'" [width]="'30'"></cooltz-icons>
 </div>
 <div *ngIf="overlay" (click)="showOverlay()" class="overlay">
@@ -49,4 +49,4 @@
         <h2 class="newPostDescB">Sobre o que você quer falar?</h2>
 
     </div>
-</div>
+</div> 

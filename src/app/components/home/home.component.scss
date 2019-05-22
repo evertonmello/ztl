@@ -3,7 +3,20 @@
 }
 .feedContainer{
     height: 370px;
-     display: inline-flex;
+    overflow-x: auto;
+    white-space: nowrap;
+
+}
+
+.card{
+    height: 340px;
+    width: 80%;
+    background-color: #292727;
+    border-radius: 6px;
+    margin: 10px;
+    display: inline-block;
+    overflow-x: auto;
+
 }
 
 .friendsFavorites{
@@ -99,13 +112,7 @@
 
 
 
-.card{
-    height: 340px;
-    width: 280px;
-    background-color: #292727;
-    border-radius: 6px;
-    margin: 10px;
-}
+
 h3{
     color: rgba(203,197,196,1);
     font-size: 16px;
@@ -137,7 +144,7 @@ h4{
 
 }
 
-:host /deep/ .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+ :host /deep/ .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
     background-color: #F13B40;
 }
 
@@ -171,7 +178,7 @@ mat-tab{
     font-family: HKGrotesk;
     font-weight: bold;
     font-size: 17px;
-}
+} 
 .avatar{
     border-radius: 25px;
     display: inline-block;

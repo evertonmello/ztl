@@ -10,16 +10,19 @@ import 'hammerjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  show = false
   url = "./assets/img/bey.jpg"
-  cards = [1,2,3,4,5,6]
-  friendsFavs = [1,2,3,4,5,6];
+  cards = [1,2,3,4,5,6,7,8]
+  friendsFavs = [1,2,3,4,5,6,7,8];
   overlay = false;
   private static ADADSADS = "AASD";
   constructor(private _sanitizer: DomSanitizer,private router: Router,private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit() {
+/*     setTimeout(() => {
+      this.show = true;
+    }, 2000); */
   }
 
   a(dir){

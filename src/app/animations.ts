@@ -25,10 +25,10 @@ export const slide = trigger('routeAnimations', [
     query(':leave', animateChild(),{ optional: true }),
     group([
       query(':leave', [
-        animate('300ms ease-out', style({ right: '100%'}))
+        animate('200ms ease-out', style({ right: '100%'}))
       ],{ optional: true }),
       query(':enter', [
-        animate('300ms ease-out', style({ right: '0%'}))
+        animate('200ms ease-out', style({ right: '0%'}))
       ],{ optional: true })
     ]),
     query(':enter', animateChild(),{ optional: true } ),
@@ -49,10 +49,10 @@ export const slide = trigger('routeAnimations', [
     query(':leave', animateChild(),{ optional: true }),
     group([
       query(':leave', [
-        animate('200ms ease-out', style({ right: '100%'}))
+        animate('100ms ease-out', style({ right: '100%'}))
       ]),
       query(':enter', [
-        animate('300ms ease-out', style({ right: '0%'}))
+        animate('200ms ease-out', style({ right: '0%'}))
       ],{ optional: true })
     ]),
     query(':enter', animateChild(),{ optional: true }),
@@ -73,10 +73,10 @@ export const slide = trigger('routeAnimations', [
     query(':leave', animateChild(),{ optional: true }),
     group([
       query(':leave', [
-        animate('200ms ease-out', style({ right: '100%'}))
+        animate('100ms ease-out', style({ right: '100%'}))
       ]),
       query(':enter', [
-        animate('300ms ease-out', style({ right: '0%'}))
+        animate('200ms ease-out', style({ right: '0%'}))
       ],{ optional: true })
     ]),
     query(':enter', animateChild(),{ optional: true }),
@@ -97,10 +97,10 @@ export const slide = trigger('routeAnimations', [
     query(':leave', animateChild(),{ optional: true }),
     group([
       query(':leave', [
-        animate('200ms ease-out', style({ right: '100%'}))
+        animate('100ms ease-out', style({ right: '100%'}))
       ]),
       query(':enter', [
-        animate('300ms ease-out', style({ right: '0%'}))
+        animate('200ms ease-out', style({ right: '0%'}))
       ],{ optional: true })
     ]),
     query(':enter', animateChild(),{ optional: true }),
@@ -121,10 +121,10 @@ export const slide = trigger('routeAnimations', [
     query(':leave', animateChild(),{ optional: true }),
     group([
       query(':leave', [
-        animate('200ms ease-out', style({ right: '100%'}))
+        animate('100ms ease-out', style({ right: '100%'}))
       ]),
       query(':enter', [
-        animate('300ms ease-out', style({ right: '0%'}))
+        animate('200ms ease-out', style({ right: '0%'}))
       ],{ optional: true })
     ]),
     query(':enter', animateChild(),{ optional: true }),
@@ -145,10 +145,10 @@ export const slide = trigger('routeAnimations', [
     query(':leave', animateChild(),{ optional: true }),
     group([
       query(':leave', [
-        animate('200ms ease-out', style({ right: '100%'}))
+        animate('100ms ease-out', style({ right: '100%'}))
       ]),
       query(':enter', [
-        animate('300ms ease-out', style({ right: '0%'}))
+        animate('200ms ease-out', style({ right: '0%'}))
       ],{ optional: true })
     ]),
     query(':enter', animateChild(),{ optional: true }),
