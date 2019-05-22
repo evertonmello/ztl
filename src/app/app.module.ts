@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CardComponent } from './components/home/card/card.component';
 import { ListContactComponent } from './components/list-contact/list-contact.component';
 import { SearchAComponent } from './components/search/search.component';
+import { SearchResultComponent } from './components/search/search-result/search-result.component';
 import { CooltzIconsComponent } from './components/widgets/cooltz-icons/cooltz-icons.component';
 import { BackHeaderComponent } from './components/widgets/back-header/back-header.component';
 import { GradientImgComponent } from './components/widgets/gradient-img/gradient-img.component';
@@ -29,13 +30,13 @@ const appRoutes: Routes = [
   { path: '**', redirectTo: '/login' },
 ];
 
-
 @NgModule({
   declarations: [
     AppComponent,
     SearchAComponent,
     LoginComponent,
     NewAccountComponent,
+    SearchResultComponent,
     AddContactsComponent,
     BackHeaderComponent,
     HomeComponent,

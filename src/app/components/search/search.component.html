@@ -3,9 +3,10 @@
     <input type="text" #ipt  autofocus >
     
     <mat-tab-group>
-        <mat-tab *ngFor="let item of searchItens" label="{{item}}"  >
+        <mat-tab *ngFor="let item of searchCategory; let i = index" label="{{item}}"  >
             <div class="content">
-                    <list-contact   [contacts]="contacts"></list-contact>
+                <list-contact *ngIf="i == 0"  [contacts]="contacts"></list-contact>
+                <search-result *ngIf="i != 0" ></search-result>
             </div>
         </mat-tab>
     </mat-tab-group>

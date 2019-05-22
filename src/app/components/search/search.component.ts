@@ -27,7 +27,7 @@ export class SearchAComponent implements OnInit,AfterViewInit {
     header:'',
     desc:''
   }
-  searchItens = ['Pessoas', 'Música', 'Cinema', 'Literatura']
+  searchCategory = ['Pessoas', 'Música', 'Cinema', 'Literatura']
   constructor(private router:Router,private activatedRoute: ActivatedRoute) {
 
     this.activatedRoute.queryParams.subscribe(params => {
