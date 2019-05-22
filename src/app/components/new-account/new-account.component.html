@@ -52,7 +52,8 @@
         <h3>Que tal adicionar alguns contatos?</h3>
     </section>
     
-    <button *ngIf="step != 4" class="btn" [ngClass]="{'disabled': step == 3 && !termChecked  }" >
+
+    <button *ngIf="step != 4" class="btn" [ngClass]="{'disabled': step == 3 && !termChecked ||  step == 2  && !validPassword }" >
         <h2 class="textButtons" (click)="nextStep()">Próximo</h2>
     </button>   
     <button *ngIf="step == 4" class="btn">

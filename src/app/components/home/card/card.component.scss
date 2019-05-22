@@ -15,6 +15,21 @@
     box-shadow: rgba(0, 0, 0, 0.151) 2px 3px 5px;
 }
 
+
+.menuContainer{
+    position: absolute;
+    top: 5px;
+    right: 4px;
+    display: table;
+}
+
+.menuIcon{
+    vertical-align: middle;
+    display: table-cell;
+    height: 55px;
+
+}
+
 .tag{
     background-color: #BDB6B6;
     color: #161514;

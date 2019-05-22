@@ -21,25 +21,24 @@ export class NewAccountComponent implements OnInit {
     lower:false,
     size:false
   }
-
+  validPassword = false
   value = 25;  
   step = 1
   constructor(private router: Router) { }
 
   ngOnInit() {
-    setTimeout(() => {
-      console.log(this.termChecked)
-
-    }, 4000);
   }
-
-
 
   checkPass(event){
     this.passwordVldt.upper =  this.upper.exec(this.password)? true:false
     this.passwordVldt.lower =  this.lower.exec(this.password)? true:false
     this.passwordVldt.number =  this.numb.exec(this.password)? true:false
     this.passwordVldt.size  = this.password.length > 5? true:false; 
+    this.validPassword = false;
+
+    if(this.passwordVldt.size && this.passwordVldt.number &&  this.passwordVldt.lower &&   this.passwordVldt.upper){
+      this.validPassword = true;
+    }
   }
 
   nextStep(){
