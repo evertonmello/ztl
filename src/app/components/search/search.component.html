@@ -1,11 +1,11 @@
 <div *ngIf="resultPage"   class="main">
-    <back-header (back)="backPage()"></back-header>    
-    <input type="text">
+    <back-header  (back)="backPage()"></back-header>    
+    <input type="text" #ipt  autofocus >
     
     <mat-tab-group>
         <mat-tab *ngFor="let item of searchItens" label="{{item}}"  >
             <div class="content">
-                    <list-contact [contacts]="contacts"></list-contact>
+                    <list-contact   [contacts]="contacts"></list-contact>
             </div>
         </mat-tab>
     </mat-tab-group>
@@ -14,7 +14,7 @@
     <back-header (back)="backPage()" [shadow]="true" [title]="'Nova publicação'"></back-header>    
     <h1 class="title">{{content.title}}</h1>
     <div class="iptBox" >
-        <input type="text" class="inputResult">
+        <input type="text" #ipt autofocus class="inputResult">
         <cooltz-icons (click)="search()" class="searchIco" [name]="'search'" [width]="'25'" [color]="'white'"></cooltz-icons>
     </div>
     <h2 class="desc">{{content.desc}}</h2>
