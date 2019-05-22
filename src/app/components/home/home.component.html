@@ -7,8 +7,9 @@
 <mat-tab-group>
     <mat-tab label="Música">
         <div class="block1">
-            <div class="feedContainer" (swiperight)="a('right feed')" (swipeleft)="a('left')" >
-                    <div  *ngFor="let card of cards"  class="card" style="pointer-events: none" >
+<!--             <div class="feedContainer" (swiperight)="a('right feed')" (swipeleft)="a('left')" >
+-->         <div class="feedContainer" >
+                    <div  *ngFor="let card of cards"  class="card"  >
                         <app-card></app-card>   
                     </div>                    
             </div>

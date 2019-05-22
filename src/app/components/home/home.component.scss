@@ -134,8 +134,7 @@ h4{
     bottom: 0;
     background-color: rgba(0,0,0,0.7); 
     z-index: 2;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%); 
+
 }
 
 :host /deep/ .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
