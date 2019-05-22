@@ -1,4 +1,4 @@
-<div class="menuContainer" >
+<div class="menuContainer"  >
     <img class="avatar" src="./assets/img/avatar1.jpg" alt="profileImage" width="30" height="30">
     <cooltz-icons [name]="'bell'" [width]="'25'" [color]="'white'" class="menuIcons"></cooltz-icons>
     <cooltz-icons (click)="search()" [name]="'search'" [width]="'25'" [color]="'white'" class="menuIcons"  ></cooltz-icons>
@@ -6,8 +6,8 @@
 <mat-tab-group>
     <mat-tab label="Música">
         <div class="block1">
-            <div class="feedContainer"  >
-                    <div  *ngFor="let card of cards" class="card" >
+            <div class="feedContainer" (swiperight)="a('right feed')" (swipeleft)="a('left')" >
+                    <div  *ngFor="let card of cards"  class="card" style="pointer-events: none" >
                         <app-card></app-card>   
                     </div>                    
             </div>
@@ -24,8 +24,8 @@
         </div>
     </mat-tab>
     <mat-tab label="Cinema">
-        <div class="feedContainer">
-            <div  *ngFor="let card of cards" class="card" >
+        <div class="feedContainer" >
+            <div  *ngFor="let card of cards" class="card" (swiperight)="a('right')" (swipeleft)="a('left')"   >
             </div>  
         </div>
     </mat-tab>

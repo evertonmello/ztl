@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-
 import {Router,ActivatedRoute} from '@angular/router';
+
+import 'hammerjs';
 
 @Component({
   selector: 'app-home',
@@ -21,6 +22,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  a(dir){
+    console.log(dir)
+  }
   showOverlay(){
     this.overlay = !this.overlay;
   }
