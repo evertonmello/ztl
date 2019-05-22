@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild,ElementRef, AfterViewInit } from '@angular/core';
 import {Router,ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -6,7 +6,10 @@ import {Router,ActivatedRoute} from '@angular/router';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
-export class SearchAComponent implements OnInit {
+export class SearchAComponent implements OnInit,AfterViewInit {
+
+  @ViewChild('ipt', {read: ElementRef}) private ipt: ElementRef;
+
   contacts = [{
     firstName: 'Everton',
     nickname: '@tom'
@@ -33,6 +36,10 @@ export class SearchAComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+      this.ipt.nativeElement.focus()
   }
 
   setUpContent(param){
@@ -66,6 +73,7 @@ export class SearchAComponent implements OnInit {
         this.content.title = "NENHUM RESULTADO ENCONTRADO"
         break;
     }
+
   }
 
   backPage(){
