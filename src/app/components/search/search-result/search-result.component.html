@@ -2,11 +2,10 @@
   <div *ngFor="let resultType of resultTypes; let i = index" class="resultBox">
     <h1 class="respType">{{resultType}}</h1>
     <div *ngFor="let item of array; let j = index" class="itemContainer">
-      <img *ngIf="j < 3" class="avatar" src="./assets/img/avatar1.jpg" alt="profileImage" width="38" height="38">
-      <div  *ngIf="j < 3" class="namesContainer" [ngClass]="{'noDesc':!item.desc}">
-          <h2 class="itemName"  >{{item.name}}</h2>
-          <h3  class="itemDesc">{{item.desc}}</h3>
-         <br>
+      <img *ngIf="j < 300" class="avatar" src="./assets/img/avatar1.jpg" alt="profileImage" width="38" height="38">
+      <div  *ngIf="j < 300"  class="namesContainer">
+            <h2 class="itemName"  >{{item.name}}</h2>
+            <h3 *ngIf="item.desc"  class="itemDesc">{{item.desc}}</h3>
       </div>
     </div>
     <h1 class="respType">Ver todos</h1>

@@ -11,31 +11,27 @@
 }
 .avatar{
     border-radius: 25px;
-    display: inline-block;
-    vertical-align: sub;
     margin-right: 8px;
 }
 .itemContainer{
-    margin-bottom: 5px;
+    margin-bottom: 16px;
+    height: 40px;
+    display: table;
 }
 .itemName{
     font-size: 16px;
     font-weight: bold;
     color: #FFFFFBF7;
-    display: inline-block;
-    vertical-align: super;
+    display: table-cell;
+    vertical-align: middle;
 }
 .itemDesc{
     font-size: 14px;
     color: #BDB6B6;
-    margin-top: -9px;
 }
 .namesContainer{
-   display: inline-block;
-   vertical-align: middle;
-
-   &.noDesc{
-    vertical-align: sub;
-    margin-bottom: 14px;
-   }
+   height: 40px;
+   display: table-cell;
+   vertical-align: middle;  
 }
+
