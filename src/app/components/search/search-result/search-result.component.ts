@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'search-result',
@@ -38,10 +39,9 @@ export class SearchResultComponent implements OnInit {
       {name:'Lady albun',desc:'desc desc', image: ''},
       {name:'Lady albun',desc:'desc desc', image: ''}]
   }
-//  resultTypes = ['musicas', 'as']
-  resultTypes = Object.keys(this.searchResponse)
-
-  array =  [
+  @Input()resultTypes = Object.keys(this.searchResponse)
+  @Input()all = false
+  @Input()array =  [
     {name:'Lady albun',desc:'', image: ''},
     {name:'Lady albun',desc:'desc desc', image: ''},
     {name:'Lady albun',desc:'desc desc', image: ''},
@@ -51,9 +51,7 @@ export class SearchResultComponent implements OnInit {
     {name:'Lady albun',desc:'desc desc', image: ''},
     {name:'Lady albun',desc:'desc desc', image: ''}]
 
-/*   songs: ['Lady song1', 'Lady song1', 'Lady song1', 'Lady song1', 'Lady song1', 'Lady song1', 'Lady song1', 'Lady song1', 'Lady song1'],
-  albuns: ['Lady Soul', 'Lady2', 'Lady3', 'Lady4', 'Lady5', 'Lady6', 'Lady7', 'Lady8', 'Lady9'], */
-constructor() { }
+constructor(private router:Router) { }
 
 ngOnInit() {
   console.log(this.array.length)
@@ -61,6 +59,11 @@ ngOnInit() {
 
 getContentArray(index){
   return this.searchResponse[Object.keys(this.searchResponse)[index].toString()];
+}
+
+
+seeAll(){
+  this.router.navigateByUrl('resultAll')
 }
 
 }

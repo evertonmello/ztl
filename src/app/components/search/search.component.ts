@@ -32,6 +32,7 @@ export class SearchAComponent implements OnInit,AfterViewInit {
 
     this.activatedRoute.queryParams.subscribe(params => {
       this.setUpContent(params.opt)
+      this.showCoverView(params.coverView)
     });
   }
 
@@ -40,6 +41,10 @@ export class SearchAComponent implements OnInit,AfterViewInit {
 
   ngAfterViewInit() {
       this.ipt.nativeElement.focus()
+  }
+
+  showCoverView(coverView){
+    this.resultPage = coverView ? false: true;
   }
 
   setUpContent(param){
@@ -81,6 +86,7 @@ export class SearchAComponent implements OnInit,AfterViewInit {
   }
   search(){
     this.resultPage = true;
+    window['result'] = "[asd]"
   }
 
 }
