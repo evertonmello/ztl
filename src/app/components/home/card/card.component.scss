@@ -5,9 +5,9 @@
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
-.main{
+.cardContainer{
     height: 100%;
-    width: 100%;
+    width: 300px;
     background-color: #292727; 
     position: relative;    
     border-bottom-left-radius: 6px;
@@ -15,6 +15,26 @@
     box-shadow: rgba(0, 0, 0, 0.151) 2px 3px 5px;
     overflow: hidden;
 }
+
+
+@media screen and (min-width: 400px) { 
+    .main{
+      width: 330px
+    }
+}
+
+@media screen and (max-width: 360px) { 
+    .main{
+      width: 280px
+    }
+}
+
+@media screen and (max-width: 330px) { 
+    .main{
+      width: 260px
+    }
+}
+
 
 
 .menuContainer{

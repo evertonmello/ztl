@@ -3,9 +3,10 @@
 }
 .feedContainer{
     height: 370px;
-    overflow-x: auto;
-    white-space: nowrap;
-
+  /*   overflow-x: auto;
+    white-space: nowrap; */
+    display: inline-flex;
+    transition: all 300ms;
 }
 
 .card{
@@ -15,8 +16,7 @@
     border-radius: 6px;
     margin: 10px;
     display: inline-block;
-    overflow-x: auto;
-
+    overflow: unset;
 }
 
 .friendsFavorites{
@@ -28,6 +28,10 @@
     overflow:auto;
     display: block;
     margin-bottom: 12px;
+
+    &.feed{
+        overflow: hidden;
+    }
 
 }
 
