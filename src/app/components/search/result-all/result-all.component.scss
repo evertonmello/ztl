@@ -1,0 +1,21 @@
+.ipt{
+    width: 100%; margin-bottom: 10px
+}
+
+.iptContainer{
+    position: relative; 
+}
+
+.ico{
+    position: absolute;
+    right: 10px;
+    top: 4px;
+
+    &.s{
+        top: 6px;
+    }
+}
+
+.content{
+    margin: 10px 24px 0 24px;
+}

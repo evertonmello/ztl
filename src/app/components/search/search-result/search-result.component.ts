@@ -17,6 +17,14 @@ export class SearchResultComponent implements OnInit {
       {name: 'Ladytron',imagedesc:'',image: ''},
       {name: 'Lady Antebellum',desc:'',image: ''},
       {name: 'Lady Gaga',desc:'',image: ''},
+      {name: 'Lady Gaga',desc:'',image: ''},
+      {name: 'Ladytron',imagedesc:'',image: ''},
+      {name: 'Lady Antebellum',desc:'',image: ''},
+      {name: 'Lady Gaga',desc:'',image: ''},
+      {name: 'Lady Gaga',desc:'',image: ''},
+      {name: 'Ladytron',imagedesc:'',image: ''},
+      {name: 'Lady Antebellum',desc:'',image: ''},
+      {name: 'Lady Gaga',desc:'',image: ''},
       {name: 'Ladytron',imagedesc:'desc desc',image: ''},
       { name: 'Lady Antebellum',desc:'',image: ''}],
     songs: [
@@ -24,6 +32,21 @@ export class SearchResultComponent implements OnInit {
       {name:'Lady song1',desc:'', image: ''},
       {name:'Lady song1',desc:'desc desc', image: ''},
       {name:'Lady song1',desc:'desc desc', image: ''},
+      {name:'Lady song1',desc:'desc desc', image: ''},
+      {name:'Lady song1',desc:'', image: ''},
+      {name:'Lady song1',desc:'desc desc', image: ''},
+      {name:'Lady song1',desc:'desc desc', image: ''},
+      {name:'Lady song1',desc:'', image: ''},
+      {name:'Lady song1',desc:'desc desc', image: ''},
+      {name:'Lady song1',desc:'desc desc', image: ''},
+      {name:'Lady song1',desc:'desc desc', image: ''},
+      {name:'Lady song1',desc:'', image: ''},
+      {name:'Lady song1',desc:'desc desc', image: ''},
+      {name:'Lady song1',desc:'', image: ''},
+      {name:'Lady song1',desc:'desc desc', image: ''},
+      {name:'Lady song1',desc:'desc desc', image: ''},
+      {name:'Lady song1',desc:'desc desc', image: ''},
+      {name:'Lady song1',desc:'', image: ''},
       {name:'Lady song1',desc:'desc desc', image: ''},
       {name:'Lady song1',desc:'desc desc', image: ''},
       {name:'Lady song1',desc:'desc desc', image: ''},
@@ -37,9 +60,21 @@ export class SearchResultComponent implements OnInit {
       {name:'Lady albun',desc:'desc desc', image: ''},
       {name:'Lady albun',desc:'desc desc', image: ''},
       {name:'Lady albun',desc:'desc desc', image: ''},
+      {name:'Lady albun',desc:'desc desc', image: ''},
+      {name:'Lady albun',desc:'desc desc', image: ''},
+      {name:'Lady albun',desc:'desc desc', image: ''},
+      {name:'Lady albun',desc:'desc desc', image: ''},
+      {name:'Lady albun',desc:'desc desc', image: ''},
+      {name:'Lady albun',desc:'desc desc', image: ''},
+      {name:'Lady albun',desc:'desc desc', image: ''},
+      {name:'Lady albun',desc:'desc desc', image: ''},
+      {name:'Lady albun',desc:'desc desc', image: ''},
+      {name:'Lady albun',desc:'desc desc', image: ''},
+      {name:'Lady albun',desc:'desc desc', image: ''},
+      {name:'Lady albun',desc:'desc desc', image: ''},
       {name:'Lady albun',desc:'desc desc', image: ''}]
   }
-  @Input()resultTypes = Object.keys(this.searchResponse)
+  @Input()resultTitles = Object.keys(this.searchResponse)
   @Input()all = false
   @Input()array =  [
     {name:'Lady albun',desc:'', image: ''},
@@ -49,7 +84,21 @@ export class SearchResultComponent implements OnInit {
     {name:'Lady albun',desc:'desc desc', image: ''},
     {name:'Lady albun',desc:'desc desc', image: ''},
     {name:'Lady albun',desc:'desc desc', image: ''},
-    {name:'Lady albun',desc:'desc desc', image: ''}]
+    {name:'Lady albun',desc:'desc desc', image: ''},
+    {name:'Lady song1',desc:'', image: ''},
+    {name:'Lady song1',desc:'desc desc', image: ''},
+    {name:'Lady song1',desc:'desc desc', image: ''},
+    {name:'Lady song1',desc:'', image: ''},
+    {name:'Lady song1',desc:'desc desc', image: ''},
+    {name:'Lady song1',desc:'desc desc', image: ''},
+    {name:'Lady song1',desc:'desc desc', image: ''},
+    {name:'Lady song1',desc:'', image: ''},
+    {name:'Lady song1',desc:'desc desc', image: ''},
+    {name:'Lady song1',desc:'', image: ''},
+    {name:'Lady song1',desc:'desc desc', image: ''},
+    {name:'Lady song1',desc:'desc desc', image: ''},
+    {name:'Lady song1',desc:'desc desc', image: ''},
+    {name:'Lady song1',desc:'', image: ''}]
 
 constructor(private router:Router) { }
 
@@ -62,8 +111,9 @@ getContentArray(index){
 }
 
 
-seeAll(){
-  this.router.navigateByUrl('resultAll')
+seeAll(resultTitle){
+  this.router.navigate(['/resultAll'], { queryParams: { title: resultTitle} });
+
 }
 
 }

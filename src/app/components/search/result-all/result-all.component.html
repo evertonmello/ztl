@@ -1,6 +1,11 @@
 <back-header [shadow]="true" (click)="backToGenericSearc()"></back-header>
 
-<div style="margin: 10px 24px 0 24px">
-    <input type="text" style="width: 100%">
-    <search-result [all]="true" [resultTypes]="['Artist']" ></search-result>
+<div class="content" >
+    <div class="iptContainer">
+        <input #ipt (keyup)="checkIcon(ipt)" type="text" class="ipt" >
+        <cooltz-icons *ngIf="icoOpt == 'clear'"   [name]="'clear'" [width]="'30'" [color]="'white'" class="ico"></cooltz-icons>
+        <cooltz-icons  *ngIf="icoOpt == 'search'"  [name]="'search'" [width]="'24'" [color]="'white'" class="ico s"></cooltz-icons>
+    </div>
+    <search-result [all]="true" [resultTitles]="[resultTitle]" ></search-result>
 </div>
+

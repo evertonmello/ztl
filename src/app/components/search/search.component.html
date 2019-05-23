@@ -1,6 +1,10 @@
 <div *ngIf="resultPage"   class="main">
     <back-header  (back)="backPage()"></back-header>    
-    <input type="text" #ipt  autofocus >
+     <div class="icoCtnr">
+        <input #ipt (keyup)="checkIcon(ipt)" type="text"  autofocus >
+        <cooltz-icons *ngIf="icoOpt == 'clear'"   [name]="'clear'" [width]="'30'" [color]="'white'" class="ico"></cooltz-icons>
+        <cooltz-icons  *ngIf="icoOpt == 'search'"  [name]="'search'" [width]="'24'" [color]="'white'" class="ico s"></cooltz-icons>
+    </div> 
     
     <mat-tab-group>
         <mat-tab *ngFor="let item of searchCategory; let i = index" label="{{item}}"  >

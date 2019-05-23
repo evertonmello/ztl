@@ -21,6 +21,7 @@ export class SearchAComponent implements OnInit,AfterViewInit {
     nickname: '@tom'
   }];
 
+  icoOpt = 'search'
   resultPage = false
   content = {
     title:'',
@@ -41,6 +42,10 @@ export class SearchAComponent implements OnInit,AfterViewInit {
 
   ngAfterViewInit() {
       this.ipt.nativeElement.focus()
+  }
+  
+  checkIcon(ipt){
+    this.icoOpt = ipt.value? 'clear': 'search'
   }
 
   showCoverView(coverView){
