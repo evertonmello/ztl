@@ -102,18 +102,22 @@ export class SearchResultComponent implements OnInit {
 
 constructor(private router:Router) { }
 
-ngOnInit() {
-  console.log(this.array.length)
-}
+  ngOnInit() {
+    console.log(this.array.length)
+  }
 
-getContentArray(index){
-  return this.searchResponse[Object.keys(this.searchResponse)[index].toString()];
-}
+  getContentArray(index){
+    return this.searchResponse[Object.keys(this.searchResponse)[index].toString()];
+  }
 
+  seeAll(resultTitle){
+    this.router.navigate(['/resultAll'], { queryParams: { title: resultTitle} });
+  }
 
-seeAll(resultTitle){
-  this.router.navigate(['/resultAll'], { queryParams: { title: resultTitle} });
+  goToProfile(profile){
+    console.log(profile)
+    this.router.navigate(['/profile'], { queryParams: { profileId: 1} });
 
-}
+  }
 
 }

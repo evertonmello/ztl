@@ -32,7 +32,7 @@ export class SearchAComponent implements OnInit,AfterViewInit {
   constructor(private router:Router,private activatedRoute: ActivatedRoute) {
 
     this.activatedRoute.queryParams.subscribe(params => {
-      this.setUpContent(params.opt)
+      this.setUpContent(params.coverView)
       this.showCoverView(params.coverView)
     });
   }
@@ -53,6 +53,7 @@ export class SearchAComponent implements OnInit,AfterViewInit {
   }
 
   setUpContent(param){
+
     switch (param) {
       case 'listen':
       this.content.title = "O QUE VOCÊ ESTÁ OUVINDO AGORA?"

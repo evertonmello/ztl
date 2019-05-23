@@ -12,10 +12,10 @@ import 'hammerjs';
 export class HomeComponent implements OnInit {
 
   url = "./assets/img/bey.jpg"
-  cards = [1,2,3,4,5,6,7,8,2,3]
+  cards = ['./assets/img/avengers.jpg','./assets/img/shazam.png','./assets/img/a_star.jpg','./assets/img/avatar3.jpg']
   friendsFavs = [1,2,3,4,5,6,7,8];
   overlay = false;
-  page = 1;
+  currentCard = 0;
   px = 0
   @ViewChild('feed')feed :ElementRef
   constructor(private _sanitizer: DomSanitizer,private router: Router,
@@ -28,16 +28,21 @@ export class HomeComponent implements OnInit {
 
   swipe(dir){
     let elements = this.elem.nativeElement.querySelectorAll('.cardContainer');
-    if(dir == 'left'){
-      this.px = this.px - (parseFloat(elements[0].clientWidth) + 20);
-    }else{
-      this.px = this.px + (parseFloat(elements[0].clientWidth) + 20);
-    }
 
+      if(dir == 'left'){
+        if(this.currentCard < (this.cards.length-1)){
+          this.px = this.px - (parseFloat(elements[0].clientWidth) + 20);
+          this.currentCard++
+        }
+      }else{
+        if(this.currentCard > 0){
+          this.px = this.px + (parseFloat(elements[0].clientWidth) + 20);
+          this.currentCard--
+        }
+      }
     this.feed.nativeElement.style.transition = "all 300ms";
     this.feed.nativeElement.style.transform = "translateX(" + this.px +"px)"
 
-    this.page++
 
   }
   showOverlay(){
@@ -54,11 +59,11 @@ export class HomeComponent implements OnInit {
 
   searchToPost(triggerBtn, content){
     if(!this.overlay || triggerBtn ){
-      this.router.navigate(['/search'], { queryParams: { opt: content} });
+      this.router.navigate(['/search'], { queryParams: { coverView: content} });
     }
   }
 
   search(){
-    this.router.navigate(['/search'], { queryParams: { opt: 'search'} });
+    this.router.navigate(['/search'], { queryParams: { coverView: 'search'} });
   }
 }

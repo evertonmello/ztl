@@ -1,8 +1,8 @@
 <div>
   <div *ngFor="let resultTitle of resultTitles; let i = index" class="resultBox">
     <h1 class="respType">{{resultTitle}}</h1>
-    <div *ngFor="let item of array; let j = index" class="itemContainer" [ngClass]="{'hide': j > 2 && !all }">
-      <img class="avatar"  src="./assets/img/avatar1.jpg" alt="profileImage" width="38" height="38">
+    <div *ngFor="let item of array; let j = index" (click)="goToProfile(item)" class="itemContainer" [ngClass]="{'hide': j > 2 && !all }">
+      <img class="avatar"  src="./assets/img/avatar{{i}}.jpg" alt="profileImage" width="38" height="38">
       <div   class="namesContainer" >
             <h2 class="itemName"  >{{item.name}}</h2>
             <h3 *ngIf="item.desc"  class="itemDesc">{{item.desc}}</h3>

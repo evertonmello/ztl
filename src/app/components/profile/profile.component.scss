@@ -1,0 +1,43 @@
+.icoNtf{
+    position: absolute;
+    right: 24px;
+    top: 12px;
+}
+
+.icoSearch{
+    position: absolute;
+    right: 60px;
+    top: 12px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 16px;
+     color: #FFFFFBF7;
+     
+}
+
+.nick{
+    font-size: 14px;
+    color: #BDB6B6;
+}
+
+.desc{
+    font-size: 16px;
+    color: #BDB6B6;
+}
+
+.addBtn{
+    border: 0;
+    float: unset;
+}
+
+.addBtnTxt{
+    margin: auto;
+    color: rgba(255,251,247,1);
+    font-size: 16px;
+
+    &.added{
+    	color: rgba(241,59,64,1);
+    }
+}

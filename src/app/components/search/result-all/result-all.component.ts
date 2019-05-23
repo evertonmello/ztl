@@ -20,7 +20,7 @@ export class ResultAllComponent implements OnInit {
   }
 
   backToGenericSearc(){
-    this.router.navigate(['/search'], { queryParams: { opt: 'search'} });
+    this.router.navigate(['/search'], { queryParams: { coverView: 'search'} });
 
   }
 

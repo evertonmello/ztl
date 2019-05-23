@@ -10,7 +10,7 @@
         <div class="block1 feed" >
            <div #feed class="feedContainer">
                 <div *ngFor="let card of cards;"  (swiperight)="swipe('right feed')" (swipeleft)="swipe('left')"  class="card">
-                        <app-card ></app-card>
+                        <app-card [avatarUrl]="card"></app-card>
                 </div>
             </div>
         </div>

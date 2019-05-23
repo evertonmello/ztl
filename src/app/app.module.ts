@@ -16,6 +16,7 @@ import { CardComponent } from './components/home/card/card.component';
 import { ListContactComponent } from './components/list-contact/list-contact.component';
 import { SearchAComponent } from './components/search/search.component';
 import { ResultAllComponent } from './components/search/result-all/result-all.component';
+import { ProfileComponent } from './components/profile/profile.component';
 import { SearchResultComponent } from './components/search/search-result/search-result.component';
 import { CooltzIconsComponent } from './components/widgets/cooltz-icons/cooltz-icons.component';
 import { BackHeaderComponent } from './components/widgets/back-header/back-header.component';
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
   { path: 'home',      component: HomeComponent ,data: {animation: 'homePage'} },
   { path: 'addContacts',      component: AddContactsComponent ,data: {animation: 'addContactsPage'} },
   { path: 'login',      component: LoginComponent,data: {animation: 'loginPage'} },
+  { path: 'profile',      component: ProfileComponent,data: {animation: 'profile'} },
   { path: 'search',      component: SearchAComponent, data:{ animation:'search' }},
   { path: 'resultAll',      component: ResultAllComponent, data:{ animation:'resultAll' }},
   { path: 'search/:opt',      component: SearchAComponent, data:{ animation:'search'} },
@@ -42,6 +44,7 @@ const appRoutes: Routes = [
     AddContactsComponent,
     BackHeaderComponent,
     HomeComponent,
+    ProfileComponent,
     CardComponent,
     ResultAllComponent,
     ListContactComponent,
