@@ -63,6 +63,16 @@
 
 }
 
+.plusIco{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    height: 30%;
+    width: 50%;
+    text-align: center;
+    margin: -15% 0 0 -25%;
+}
+
 .addBtn{
     border: 0;
     float: unset;
@@ -122,6 +132,7 @@
     margin-right: 8px;
     box-shadow: rgba(0, 0, 0, 0.151) 2px 3px 5px;
     position: relative;
+    background-color: #292727;
 }
 
 .favTitile{

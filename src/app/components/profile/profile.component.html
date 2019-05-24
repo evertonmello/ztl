@@ -1,7 +1,7 @@
 <div style="position: relative">
     <back-header (back)="backPage()" [title]="'profile name'" [shadow]="true"></back-header>
     <cooltz-icons [name]="'bell'" [width]="'25'" [color]="'white'" class="icoNtf"></cooltz-icons>
-    <cooltz-icons  [name]="'search'" [width]="'25'" [color]="'white'" class="icoSearch"></cooltz-icons>
+    <cooltz-icons (click)="goToSearch()" [name]="'search'" [width]="'25'" [color]="'white'" class="icoSearch"></cooltz-icons>
 </div>
 <div class="profileBox">
     <img src="./assets/img/avatar0.jpg" alt="" width="110" height="110" class="profileImg" >
@@ -19,11 +19,15 @@
 <mat-tab-group>
     <mat-tab label="Música">
       <div style="margin: 24px">
-      <h2 class="favTitile">Favoritos</h2>
+      <h2 *ngIf="!myProfile" class="favTitile">Favoritos</h2>
+      <h2 *ngIf="myProfile" class="favTitile">Meus Favoritos</h2>
         <div class="block1">
             <div class="friendsFavorites">
-                <div *ngFor="let friendsFav of friendsFavs" [style.background-image]="getBackground(url)"
-                    class="favItem">
+                <div *ngFor="let friendsFav of friendsFavs" class="favItem" 
+                [style.background-image]="getBackground(url,friendsFav)">
+                    <cooltz-icons *ngIf="myProfile && !friendsFav" [name]="'plus'" [width]="40" [color]="'#BDB6B6'"
+                        class="plusIco">
+                    </cooltz-icons>
                 </div>
             </div>
         </div>

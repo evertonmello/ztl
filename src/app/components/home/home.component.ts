@@ -49,6 +49,10 @@ export class HomeComponent implements OnInit {
     this.overlay = !this.overlay;
   }
 
+  goToMyProfile(){
+    this.router.navigate(['/profile'], { queryParams: { myProfile: true} });
+  }
+
   getBackground(image) {
       return this._sanitizer.bypassSecurityTrustStyle(`linear-gradient(180deg, rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0.150) 50%,    
