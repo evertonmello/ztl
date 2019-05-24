@@ -74,6 +74,7 @@ export class SearchResultComponent implements OnInit {
       {name:'Lady albun',desc:'desc desc', image: ''},
       {name:'Lady albun',desc:'desc desc', image: ''}]
   }
+  @Input()selectedTab = 0
   @Input()lastPage = 'search';
   @Input()resultTitles = Object.keys(this.searchResponse)
   @Input()all = false
@@ -112,11 +113,17 @@ constructor(private router:Router) { }
   }
 
   seeAll(resultTitle){
-    this.router.navigate(['/resultAll'], { queryParams: { title: resultTitle} });
+    this.router.navigate(['/resultAll'], { queryParams: { 
+      title: resultTitle,
+      selectedTab: this.selectedTab} });
   }
 
   goToProfile(profile){
-    this.router.navigate(['/profile'], { queryParams: { profileId: 1, lastPage: this.lastPage} });
+    this.router.navigate(['/profile'], { queryParams: {
+       profileId: 1,
+       lastPage: this.lastPage,
+       selectedTab: this.selectedTab} 
+    });
 
   }
 

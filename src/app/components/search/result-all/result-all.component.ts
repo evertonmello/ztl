@@ -10,9 +10,11 @@ export class ResultAllComponent implements OnInit {
 
   icoOpt = 'search'
   resultTitle
+  selectedTab = 0;
   constructor(private router:Router, private activatedRoute :ActivatedRoute) { 
     this.activatedRoute.queryParams.subscribe(params => {
       this.resultTitle = params.title
+      this.selectedTab = params.selectedTab;
     });  
   }
 
@@ -20,7 +22,7 @@ export class ResultAllComponent implements OnInit {
   }
 
   backToGenericSearc(){
-    this.router.navigate(['/search'], { });
+    this.router.navigate(['/search'], { queryParams: { selectedTab: this.selectedTab} });
   }
 
   checkIcon(ipt){

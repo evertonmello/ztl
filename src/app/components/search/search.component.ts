@@ -38,7 +38,6 @@ export class SearchAComponent implements OnInit,AfterViewInit {
   }
 
   ngOnInit() {
-    console.log(this.selectedTab)
   }
 
   ngAfterViewInit() {

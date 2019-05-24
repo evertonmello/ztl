@@ -12,11 +12,14 @@ export class ProfileComponent implements OnInit {
   friendsFavs = [1,2,3,4,5,6,7,8];
   url = "./assets/img/bey.jpg"
   profileId;
-  lasPage
+  lasPage = ''
+  selectedTab = 0
   constructor(private _sanitizer: DomSanitizer,private activatedRoute:ActivatedRoute, private router:Router) {
     this.activatedRoute.queryParams.subscribe((params) =>{
+      console.log(params.selectedTab)
       this.profileId = params.profileId
       this.lasPage = params.lastPage;
+      this.selectedTab = params.selectedTab
     })
    }
 
@@ -34,7 +37,8 @@ export class ProfileComponent implements OnInit {
   }
 
   backPage(){
-    console.log(this.lasPage)
     this.router.navigateByUrl(this.lasPage)
+    this.router.navigate([this.lasPage], { queryParams: { selectedTab: this.selectedTab} });
+
   }
 }
