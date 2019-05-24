@@ -1,3 +1,10 @@
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@font-face {
+    font-family: HKGrotesk;
+    src: url('./assets/fonts/HKGrotesk-Regular.otf') format("opentype");
+}
+
 html,body{
     height: 100%;
     margin: 0;
@@ -83,12 +90,6 @@ h1,h2,h3,h4{
 
 
 
-
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@font-face {
-    font-family: HKGrotesk;
-    src: url('./assets/fonts/HKGrotesk-Regular.otf') format("opentype");
-}
 
 
     

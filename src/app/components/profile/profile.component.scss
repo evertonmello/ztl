@@ -1,3 +1,33 @@
+.profileBox{
+    margin: 24px 24px 0 24px;
+    height: 131px; 
+    overflow: hidden;
+    position: relative;
+}
+
+@media screen and (max-width: 325px) { 
+    .profileBox{
+        margin: 16px 16px 0 16px;
+    }
+
+}
+
+.menuIco{
+    position: absolute;
+    right: 0px;
+    top: 0;
+}
+
+.txtBox{
+    vertical-align: top;
+}
+.profileImg{
+    margin-right: 16px;
+    border-radius: 50%;
+    box-shadow: black 0 1px 3px;
+    float: left;
+}
+
 .icoNtf{
     position: absolute;
     right: 24px;
@@ -14,24 +44,55 @@
     font-weight: bold;
     font-size: 16px;
      color: #FFFFFBF7;
-     
+     word-break: break-all;
+     max-width: 92%;
 }
 
 .nick{
     font-size: 14px;
     color: #BDB6B6;
+    margin-bottom: 10px;
+    word-break: break-all;
+    display: inline-block;
 }
 
 .desc{
     font-size: 16px;
     color: #BDB6B6;
+    word-break: break-all;
+
 }
 
 .addBtn{
     border: 0;
     float: unset;
+    margin-left: 24px;
+
 }
 
+.locked{
+    margin: 10px 40px 40px 40px;
+    height: 340px;
+    border: dashed 2px #8E8988;
+    position: relative;
+}
+.icoLock{
+    margin-right: auto;
+    margin-left: auto;
+    display: table;
+}
+.lockedDesc{
+    font-size: 18px;
+    font-weight: normal;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 30%;
+    width: 50%;
+    text-align: center;
+    margin: -15% 0 0 -25%;
+}
 .addBtnTxt{
     margin: auto;
     color: rgba(255,251,247,1);
@@ -40,4 +101,62 @@
     &.added{
     	color: rgba(241,59,64,1);
     }
+}
+
+.block1 {
+    overflow:auto;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.friendsFavorites{
+    height: 106px;
+     display: inline-flex;
+}
+
+.favItem{
+    background-size: 98px;
+    height: 95px;
+    width: 95px;
+    border-radius: 5px;
+    margin-right: 8px;
+    box-shadow: rgba(0, 0, 0, 0.151) 2px 3px 5px;
+    position: relative;
+}
+
+.favTitile{
+    font-weight: bold;
+    color: #FFFBF7;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+:host /deep/ .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #F13B40;
+}
+
+:host /deep/ .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+    color: #FFFBF7;
+}
+    
+:host /deep/ .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
+    border-color: rgba(142, 137, 136, 0.267);
+}
+
+:host /deep/ .mat-tab-header-pagination-chevron {
+    border-color: rgba(142, 137, 136, 0.226);
+}
+
+:host /deep/ .mat-tab-label{
+    color:#8E8988;
+}
+
+mat-tab{
+    color: #F13B40;
+}
+:host /deep/.mat-tab-label,:host /deep/.mat-tab-label-active{
+    min-width: 31%!important;
+  //  max-width: 350px!important;
+    padding: 3px!important;
+    margin: 3px!important;
 }
