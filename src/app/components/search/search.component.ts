@@ -9,7 +9,7 @@ import {Router,ActivatedRoute} from '@angular/router';
 export class SearchAComponent implements OnInit,AfterViewInit {
 
   @ViewChild('ipt', {read: ElementRef}) private ipt: ElementRef;
-
+  selectedTab = 0
   contacts = [{
     firstName: 'Everton',
     nickname: '@tom'
@@ -22,7 +22,7 @@ export class SearchAComponent implements OnInit,AfterViewInit {
   }];
 
   icoOpt = 'search'
-  resultPage = false
+  resultPage = true;
   content = {
     title:'',
     header:'',
@@ -32,12 +32,13 @@ export class SearchAComponent implements OnInit,AfterViewInit {
   constructor(private router:Router,private activatedRoute: ActivatedRoute) {
 
     this.activatedRoute.queryParams.subscribe(params => {
-      this.setUpContent(params.coverView)
-      this.showCoverView(params.coverView)
+      if(params.coverView){this.setSearchCover(params.coverView) }
+      this.selectedTab = params.selectedTab || 0;
     });
   }
 
   ngOnInit() {
+    console.log(this.selectedTab)
   }
 
   ngAfterViewInit() {
@@ -52,9 +53,8 @@ export class SearchAComponent implements OnInit,AfterViewInit {
     this.resultPage = coverView ? false: true;
   }
 
-  setUpContent(param){
-
-    switch (param) {
+  setSearchCover(params){
+    switch (params) {
       case 'listen':
       this.content.title = "O QUE VOCÊ ESTÁ OUVINDO AGORA?"
       this.content.desc = 'Pesquise pelo nome do artista, albúm ou música.'
@@ -84,6 +84,7 @@ export class SearchAComponent implements OnInit,AfterViewInit {
         this.content.title = "NENHUM RESULTADO ENCONTRADO"
         break;
     }
+    this.showCoverView(params)
 
   }
 

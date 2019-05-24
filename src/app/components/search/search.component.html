@@ -1,3 +1,15 @@
+<!-- capa da busca (o que está buscando) -->
+<div *ngIf="!resultPage" >
+        <back-header (back)="backPage()" [shadow]="true" [title]="'Nova publicação'"></back-header>    
+        <h1 class="title">{{content.title}}</h1>
+        <div class="iptBox" >
+            <input type="text" #ipt autofocus class="inputResult">
+            <cooltz-icons (click)="search()" class="searchIco" [name]="'search'" [width]="'25'" [color]="'white'"></cooltz-icons>
+        </div>
+        <h2 class="desc">{{content.desc}}</h2>
+    
+</div>
+<!-- -- -->
 <div *ngIf="resultPage"   class="main">
     <back-header  (back)="backPage()"></back-header>    
      <div class="icoCtnr">
@@ -6,22 +18,12 @@
         <cooltz-icons  *ngIf="icoOpt == 'search'"  [name]="'search'" [width]="'24'" [color]="'white'" class="ico s"></cooltz-icons>
     </div> 
     
-    <mat-tab-group>
+    <mat-tab-group [(selectedIndex)]="selectedTab">
         <mat-tab *ngFor="let item of searchCategory; let i = index" label="{{item}}"  >
             <div class="content">
                 <list-contact *ngIf="i == 0"  [contacts]="contacts"></list-contact>
-                <search-result *ngIf="i != 0" ></search-result>
+                <search-result [lastPage]="'search'" *ngIf="i != 0" ></search-result>
             </div>
         </mat-tab>
     </mat-tab-group>
 </div> 
-<div *ngIf="!resultPage"  >
-    <back-header (back)="backPage()" [shadow]="true" [title]="'Nova publicação'"></back-header>    
-    <h1 class="title">{{content.title}}</h1>
-    <div class="iptBox" >
-        <input type="text" #ipt autofocus class="inputResult">
-        <cooltz-icons (click)="search()" class="searchIco" [name]="'search'" [width]="'25'" [color]="'white'"></cooltz-icons>
-    </div>
-    <h2 class="desc">{{content.desc}}</h2>
-
-</div>

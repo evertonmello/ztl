@@ -20,14 +20,11 @@ export class ResultAllComponent implements OnInit {
   }
 
   backToGenericSearc(){
-    this.router.navigate(['/search'], { queryParams: { coverView: 'search'} });
-
+    this.router.navigate(['/search'], { });
   }
 
   checkIcon(ipt){
     this.icoOpt = ipt.value? 'clear': 'search'
   }
-
-  
 
 }

@@ -74,6 +74,7 @@ export class SearchResultComponent implements OnInit {
       {name:'Lady albun',desc:'desc desc', image: ''},
       {name:'Lady albun',desc:'desc desc', image: ''}]
   }
+  @Input()lastPage = 'search';
   @Input()resultTitles = Object.keys(this.searchResponse)
   @Input()all = false
   @Input()array =  [
@@ -115,8 +116,7 @@ constructor(private router:Router) { }
   }
 
   goToProfile(profile){
-    console.log(profile)
-    this.router.navigate(['/profile'], { queryParams: { profileId: 1} });
+    this.router.navigate(['/profile'], { queryParams: { profileId: 1, lastPage: this.lastPage} });
 
   }
 

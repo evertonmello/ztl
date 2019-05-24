@@ -6,6 +6,6 @@
         <cooltz-icons *ngIf="icoOpt == 'clear'"   [name]="'clear'" [width]="'30'" [color]="'white'" class="ico"></cooltz-icons>
         <cooltz-icons  *ngIf="icoOpt == 'search'"  [name]="'search'" [width]="'24'" [color]="'white'" class="ico s"></cooltz-icons>
     </div>
-    <search-result [all]="true" [resultTitles]="[resultTitle]" ></search-result>
+    <search-result [lastPage]="'resultAll'" [all]="true" [resultTitles]="[resultTitle]" ></search-result>
 </div>
 
