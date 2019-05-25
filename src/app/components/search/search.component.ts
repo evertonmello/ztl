@@ -1,5 +1,9 @@
-import { Component, OnInit,ViewChild,ElementRef, AfterViewInit } from '@angular/core';
+import { Component,QueryList,Directive, OnInit,ViewChild,ViewChildren,ElementRef, AfterViewInit } from '@angular/core';
 import {Router,ActivatedRoute} from '@angular/router';
+
+@Directive({selector: 'child-directive'})
+class ChildDirective {
+}
 
 @Component({
   selector: 'search',
@@ -8,7 +12,9 @@ import {Router,ActivatedRoute} from '@angular/router';
 })
 export class SearchAComponent implements OnInit,AfterViewInit {
 
+  @ViewChildren('tab') viewChildrenTab : QueryList<ChildDirective>;
   @ViewChild('ipt', {read: ElementRef}) private ipt: ElementRef;
+  @ViewChild('tab2', {read: ElementRef}) private tab2: ElementRef;
   selectedTab = 0
   contacts = [{
     firstName: 'Everton',
@@ -28,12 +34,15 @@ export class SearchAComponent implements OnInit,AfterViewInit {
     header:'',
     desc:''
   }
-  searchCategory = ['Pessoas', 'Música', 'Cinema', 'Literatura']
+  searchCategories = [];
+  postSearch = false;
   constructor(private router:Router,private activatedRoute: ActivatedRoute) {
 
     this.activatedRoute.queryParams.subscribe(params => {
       if(params.coverView){this.setSearchCover(params.coverView) }
       this.selectedTab = params.selectedTab || 0;
+      this.postSearch = params.post || false;
+
     });
   }
 
@@ -42,6 +51,12 @@ export class SearchAComponent implements OnInit,AfterViewInit {
 
   ngAfterViewInit() {
       this.ipt.nativeElement.focus()
+      this.setTabItens();
+  }
+
+  setTabItens(){
+    this.searchCategories = this.postSearch ? ['Música', 'Cinema', 'Literatura']:['Pessoas', 'Música', 'Cinema', 'Literatura'];
+
   }
   
   checkIcon(ipt){

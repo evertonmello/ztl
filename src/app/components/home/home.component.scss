@@ -185,12 +185,7 @@ h4{
 mat-tab{
     color: #F13B40;
 }
-:host /deep/.mat-tab-label,:host /deep/.mat-tab-label-active{
-    min-width: 30%!important;
-  //  max-width: 350px!important;
-    padding: 3px!important;
-    margin: 3px!important;
-}
+
 
 :host /deep/ .mat-tab-label .mat-tab-label-content{
     font-family: HKGrotesk;
