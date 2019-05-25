@@ -1,7 +1,10 @@
-import { Component,QueryList,Directive, OnInit,ViewChild,ViewChildren,ElementRef, AfterViewInit } from '@angular/core';
-import {Router,ActivatedRoute} from '@angular/router';
+import {
+  Component,
+  QueryList, Directive, OnInit, ViewChild, ViewChildren, ElementRef, Input, AfterViewInit
+} from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
-@Directive({selector: 'child-directive'})
+@Directive({ selector: 'child-directive' })
 class ChildDirective {
 }
 
@@ -10,19 +13,19 @@ class ChildDirective {
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
-export class SearchAComponent implements OnInit,AfterViewInit {
+export class SearchAComponent implements OnInit, AfterViewInit {
 
-  @ViewChildren('tab') viewChildrenTab : QueryList<ChildDirective>;
-  @ViewChild('ipt', {read: ElementRef}) private ipt: ElementRef;
-  @ViewChild('tab2', {read: ElementRef}) private tab2: ElementRef;
+  @ViewChild('ipt', { read: ElementRef }) private ipt: ElementRef;
+  @Input() postSearch = false;
+
   selectedTab = 0
   contacts = [{
     firstName: 'Everton',
     nickname: '@tom'
-  },{
+  }, {
     firstName: 'Everton',
     nickname: '@tom'
-  },{
+  }, {
     firstName: 'Everton',
     nickname: '@tom'
   }];
@@ -30,19 +33,18 @@ export class SearchAComponent implements OnInit,AfterViewInit {
   icoOpt = 'search'
   resultPage = true;
   content = {
-    title:'',
-    header:'',
-    desc:''
+    title: '',
+    header: '',
+    desc: ''
   }
   searchCategories = [];
-  postSearch = false;
-  constructor(private router:Router,private activatedRoute: ActivatedRoute) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
 
     this.activatedRoute.queryParams.subscribe(params => {
-      if(params.coverView){this.setSearchCover(params.coverView) }
+      if (params.coverView) { this.setSearchCover(params.coverView) }
       this.selectedTab = params.selectedTab || 0;
-      this.postSearch = params.post || false;
-
+      this.postSearch = JSON.parse(params.postSearch) || this.postSearch ? true : false;
+      this.setTabItens()
     });
   }
 
@@ -50,49 +52,47 @@ export class SearchAComponent implements OnInit,AfterViewInit {
   }
 
   ngAfterViewInit() {
-      this.ipt.nativeElement.focus()
-      this.setTabItens();
+    this.ipt.nativeElement.focus()
   }
 
-  setTabItens(){
-    this.searchCategories = this.postSearch ? ['Música', 'Cinema', 'Literatura']:['Pessoas', 'Música', 'Cinema', 'Literatura'];
-
-  }
-  
-  checkIcon(ipt){
-    this.icoOpt = ipt.value? 'clear': 'search'
+  setTabItens() {
+    this.searchCategories = this.postSearch ? ['Música', 'Cinema', 'Literatura'] : ['Pessoas', 'Música', 'Cinema', 'Literatura'];
   }
 
-  showCoverView(coverView){
-    this.resultPage = coverView ? false: true;
+  checkIcon(ipt) {
+    this.icoOpt = ipt.value ? 'clear' : 'search'
   }
 
-  setSearchCover(params){
+  showCoverView(coverView) {
+    this.resultPage = coverView ? false : true;
+  }
+
+  setSearchCover(params) {
     switch (params) {
       case 'listen':
-      this.content.title = "O QUE VOCÊ ESTÁ OUVINDO AGORA?"
-      this.content.desc = 'Pesquise pelo nome do artista, albúm ou música.'
+        this.content.title = "O QUE VOCÊ ESTÁ OUVINDO AGORA?"
+        this.content.desc = 'Pesquise pelo nome do artista, albúm ou música.'
         break;
       case 'topic':
-      this.content.title = "SOBRE O QUE VOCÊ QUER FALAR?"
-      this.content.desc = 'Pesquise por nome ou título.'
+        this.content.title = "SOBRE O QUE VOCÊ QUER FALAR?"
+        this.content.desc = 'Pesquise por nome ou título.'
         break;
       case 'Listen':
-      this.content.title = "O QUE VOCÊ ASSISTIU?"
-      this.content.desc = 'Pesquise pelo título.'
+        this.content.title = "O QUE VOCÊ ASSISTIU?"
+        this.content.desc = 'Pesquise pelo título.'
         break;
       case 'Listen':
-      this.content.title = "O QUE VOCÊ ESTÁ LENDO?"
-      this.content.desc = 'Pesquise pelo título.'
-      break;
+        this.content.title = "O QUE VOCÊ ESTÁ LENDO?"
+        this.content.desc = 'Pesquise pelo título.'
+        break;
       case 'search':
         this.content.title = "O QUE VOCÊ ESTÁ BUSCANDO?"
-       this.content.desc = 'Pesquise por pessoas, artistas ou títulos de obras.'
-      break;
+        this.content.desc = 'Pesquise por pessoas, artistas ou títulos de obras.'
+        break;
       case 'Listen':
         this.content.title = "NENHUM RESULTADO ENCONTRADO"
         this.content.desc = 'refine os termos de sua busca e tente novamente.'
-      break;
+        break;
 
       default:
         this.content.title = "NENHUM RESULTADO ENCONTRADO"
@@ -102,10 +102,10 @@ export class SearchAComponent implements OnInit,AfterViewInit {
 
   }
 
-  backPage(){
+  backPage() {
     this.router.navigateByUrl('home')
   }
-  search(){
+  search() {
     this.resultPage = true;
     window['result'] = "[asd]"
   }

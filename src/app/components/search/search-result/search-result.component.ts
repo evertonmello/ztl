@@ -77,7 +77,8 @@ export class SearchResultComponent implements OnInit {
   @Input()selectedTab = 0
   @Input()lastPage = 'search';
   @Input()resultTitles = Object.keys(this.searchResponse)
-  @Input()all = false
+  @Input()all = false;
+  @Input()postSearch;
   @Input()array =  [
     {name:'Lady albun',desc:'', image: ''},
     {name:'Lady albun',desc:'desc desc', image: ''},
@@ -115,6 +116,7 @@ constructor(private router:Router) { }
   seeAll(resultTitle){
     this.router.navigate(['/resultAll'], { queryParams: { 
       title: resultTitle,
+      postSearch: this.postSearch,
       selectedTab: this.selectedTab} });
   }
 

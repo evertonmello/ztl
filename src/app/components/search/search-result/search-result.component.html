@@ -1,4 +1,5 @@
-  <div *ngFor="let resultTitle of resultTitles; let i = index" class="resultBox">
+<!-- Component resposavel por renderizar itens da pesquisa -->
+<div *ngFor="let resultTitle of resultTitles; let i = index" class="resultBox">
     <h1 class="respType">{{resultTitle}}</h1>
     <div *ngFor="let item of array; let j = index" (click)="goToProfile(item)" class="itemContainer" [ngClass]="{'hide': j > 2 && !all }">
       <img class="avatar"  src="./assets/img/avatar{{i}}.jpg" alt="profileImage" width="38" height="38">

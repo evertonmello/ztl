@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit {
 
   searchToPost(triggerBtn, content){
     if(!this.overlay || triggerBtn ){
-      this.router.navigate(['/search'], { queryParams: { coverView: content, post : true} });
+      this.router.navigate(['/search'], { queryParams: { coverView: content, postSearch : true} });
     }
   }
 
