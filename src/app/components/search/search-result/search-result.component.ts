@@ -120,8 +120,9 @@ constructor(private router:Router) { }
       selectedTab: this.selectedTab} });
   }
 
-  goToProfile(profile){
-    this.router.navigate(['/profile'], { queryParams: {
+  goToItem(profile){
+    var page = this.postSearch? 'newPost': 'profile'
+    this.router.navigate([page], { queryParams: {
        profileId: 1,
        lastPage: this.lastPage,
        selectedTab: this.selectedTab} 

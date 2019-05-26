@@ -41,10 +41,7 @@ export class SearchAComponent implements OnInit, AfterViewInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
 
     this.activatedRoute.queryParams.subscribe(params => {
-      if (params.coverView) { this.setSearchCover(params.coverView) }
-      this.selectedTab = params.selectedTab || 0;
-      this.postSearch = JSON.parse(params.postSearch) || this.postSearch ? true : false;
-      this.setTabItens()
+      this.setUpSearch(params)
     });
   }
 
@@ -55,7 +52,19 @@ export class SearchAComponent implements OnInit, AfterViewInit {
     this.ipt.nativeElement.focus()
   }
 
-  setTabItens() {
+  setUpSearch(params){
+    if (params.coverView) { this.setSearchCover(params.coverView) }
+    this.selectedTab = params.selectedTab || 0;
+    this.setTabItens(params.postSearch)
+  }
+
+  setTabItens(postSearch) {
+    if(postSearch){
+      this.postSearch = true
+    }else{
+      this.postSearch = false;
+    }
+
     this.searchCategories = this.postSearch ? ['Música', 'Cinema', 'Literatura'] : ['Pessoas', 'Música', 'Cinema', 'Literatura'];
   }
 
