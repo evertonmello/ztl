@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵConsole } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
 import { MAT_CHIPS_DEFAULT_OPTIONS } from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-new-post',
@@ -15,12 +17,13 @@ export class NewPostComponent implements OnInit {
   bold = false;
   italic = false;
   underline = false;
-  strike = false;
-  leftJustify = false;
-  centerJustify = false;
-  rightJustify = false;
-  justify = false;
-  listUl = false;
+  strikeThrough = false;
+  justifyLeft = false;
+  justifyCenter = false;
+  justifyRight = false;
+  justifyFull = false;
+  insertUnorderedList = false;
+  buttons = ['bold','italic','underline','strikeThrough','justifyLeft','justifyCenter','justifyRight','justifyFull','insertUnorderedList','camera']
   camera = false;
 
   constructor(private router:Router, private activatedRoute:ActivatedRoute) {
@@ -33,8 +36,16 @@ export class NewPostComponent implements OnInit {
   ngOnInit() {
   }
 
+  setStyle(style){
+    document.execCommand(style, false, '');
+    var styleVar = style.replace("-", "_");
+    this[styleVar] = !this[styleVar];
+  }
+  
+  tglBtn(btn){
+   return this[btn]
+  }
   close(){
-    
     this.router.navigate([this.lastPage], { queryParams: {
       profileId: 1,
       lastPage: this.lastPage,
@@ -43,7 +54,4 @@ export class NewPostComponent implements OnInit {
    });
   }
 
-  tglIco(icon){
-    this[icon] = !this[icon];
-  }
 }

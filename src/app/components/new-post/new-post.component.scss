@@ -9,6 +9,11 @@
     margin: 15px 24px 10px;
 }
 
+button{
+    background-color: transparent;
+    border: 0;
+}
+
 @media screen and (max-width: 350px) { 
         
     .headerBox{
@@ -66,22 +71,13 @@
     margin-left: 22px;
     border: 0;
     color: #ADA8A7;
+}
 
-    &.bold{
-        font-weight: bold;
-         ::selection{
-            color: red;
-        }
- 
-        ::-moz-selection{
-            color: red;
-
-        }        
-    }
-
-    &.itlc{
-        font-style: italic;
-    }
+.postText{
+    font-size: 16px;
+    color:#ADA8A7;
+    font-weight: normal;
+    font-family: HKGrotesk;
 }
 
 .tglText{
