@@ -24,7 +24,10 @@ export class ResultAllComponent implements OnInit {
   }
 
   backToGenericSearc(){
-    this.router.navigate(['/search'], { queryParams: { selectedTab: this.selectedTab, postSearch: this.postSearch} });
+    this.router.navigate(['/search'], { queryParams: { 
+      selectedTab: this.selectedTab,
+      postSearch: this.postSearch
+    } });
 
   }
 

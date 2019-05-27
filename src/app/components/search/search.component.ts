@@ -38,8 +38,8 @@ export class SearchAComponent implements OnInit, AfterViewInit {
     desc: ''
   }
   searchCategories = [];
+  
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
-
     this.activatedRoute.queryParams.subscribe(params => {
       this.setUpSearch(params)
     });

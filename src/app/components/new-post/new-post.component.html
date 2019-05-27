@@ -1,7 +1,7 @@
 <div class="main">
     <div class="headerBox" >
         <div class="newPost">
-          <cooltz-icons [name]="'clear'" [width]="'25'" [color]="'#E9E2E1'"></cooltz-icons>
+          <cooltz-icons (click)="close()" [name]="'clear'" [width]="'25'" [color]="'#E9E2E1'"></cooltz-icons>
           <h1 class="title">Nova publicação</h1>
           <button class="addBtn">
               <h2 class="addBtnTxt" >Publicar</h2>
@@ -9,24 +9,26 @@
         </div>
         <div class="secontCtn">
           <img class="avatar" src="./assets/img/avatar1.jpg" alt="" width="30" height="30">
-          <h2>Name</h2>
+          <h2 class="profileName">Name</h2>
           <h2 class="changeTopic">Trocar o assunto</h2>
         </div>
       </div>
       <div class="editIconsContainer">
-        <cooltz-icons [name]="'bold'" [width]="'20'" [color]="'#E9E2E1'"></cooltz-icons>
-        <cooltz-icons [name]="'italic'" [width]="'20'" [color]="'#E9E2E1'"></cooltz-icons>
-        <cooltz-icons [name]="'underline'" [width]="'20'" [color]="'#E9E2E1'"></cooltz-icons>
-        <cooltz-icons [name]="'strike'" [width]="'20'" [color]="'#E9E2E1'"></cooltz-icons>
-        <cooltz-icons [name]="'left-justify'" [width]="'20'" [color]="'#E9E2E1'"></cooltz-icons>
-        <cooltz-icons [name]="'center-justify'" [width]="'20'" [color]="'#E9E2E1'"></cooltz-icons>
-        <cooltz-icons [name]="'right-justify'" [width]="'20'" [color]="'#E9E2E1'"></cooltz-icons>
-        <cooltz-icons [name]="'justify'" [width]="'20'" [color]="'#E9E2E1'"></cooltz-icons>
-        <cooltz-icons [name]="'list-ul'" [width]="'20'" [color]="'#E9E2E1'"></cooltz-icons>
-        <cooltz-icons [name]="'camera'" [width]="'20'" [color]="'#E9E2E1'"></cooltz-icons>
+        <cooltz-icons (click)="tglIco('bold')" [name]="'bold'" [width]="'20'" [color]="bold?'#FFFBF7':'#8E8988'"></cooltz-icons>
+        <cooltz-icons (click)="tglIco('italic')" [name]="'italic'" [width]="'20'" [color]="italic?'#FFFBF7':'#8E8988'"></cooltz-icons>
+        <cooltz-icons (click)="tglIco('underline')" [name]="'underline'" [width]="'20'" [color]="underline?'#FFFBF7':'#8E8988'"></cooltz-icons>
+        <cooltz-icons (click)="tglIco('strike')" [name]="'strike'" [width]="'20'" [color]="strike?'#FFFBF7':'#8E8988'"></cooltz-icons>
+        <cooltz-icons (click)="tglIco('leftJustify')" [name]="'left-justify'" [width]="'20'" [color]="leftJustify?'#FFFBF7':'#8E8988'"></cooltz-icons>
+        <cooltz-icons (click)="tglIco('centerJustify')" [name]="'center-justify'" [width]="'20'" [color]="centerJustify?'#FFFBF7':'#8E8988'"></cooltz-icons>
+        <cooltz-icons (click)="tglIco('rightJustify')" [name]="'right-justify'" [width]="'20'" [color]="rightJustify?'#FFFBF7':'#8E8988'"></cooltz-icons>
+        <cooltz-icons (click)="tglIco('justify')" [name]="'justify'" [width]="'20'" [color]="justify?'#FFFBF7':'#8E8988'"></cooltz-icons>
+        <cooltz-icons (click)="tglIco('listUl')" [name]="'list-ul'" [width]="'20'" [color]="listUl?'#FFFBF7':'#8E8988'"></cooltz-icons>
+        <cooltz-icons (click)="tglIco('camera')" [name]="'camera'" [width]="'20'" [color]="camera?'#FFFBF7':'#8E8988'"></cooltz-icons>
       </div>
       <div class="iptContainer" >
-        <textarea class="txtArea" name="" id="" cols="30" rows="10" ></textarea>
+        <textarea class="txtArea" name="" id="" cols="30" rows="10" 
+        [ngClass]="{'bold':bold, 'itlc':italic}"   >
+      </textarea>
       </div>
       <div class="postTypeContainer">
         <h3 class="tglText">POSTAGEM PÚBLICA? </h3>

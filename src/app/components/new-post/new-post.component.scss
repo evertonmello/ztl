@@ -66,6 +66,22 @@
     margin-left: 22px;
     border: 0;
     color: #ADA8A7;
+
+    &.bold{
+        font-weight: bold;
+         ::selection{
+            color: red;
+        }
+ 
+        ::-moz-selection{
+            color: red;
+
+        }        
+    }
+
+    &.itlc{
+        font-style: italic;
+    }
 }
 
 .tglText{
@@ -91,6 +107,9 @@
     display: inline-block;
     vertical-align: top;
     margin-left: 20px;
+}
+.profileName{
+    vertical-align: 25%;
 }
 h3{
     font-size: 12px;
