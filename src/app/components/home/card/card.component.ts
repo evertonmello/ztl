@@ -21,4 +21,5 @@ export class CardComponent implements OnInit {
     this.router.navigate(['postView'])
   }
 
+
 }

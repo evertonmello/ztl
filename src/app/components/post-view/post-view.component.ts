@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'post-view',
@@ -45,9 +46,12 @@ export class PostViewComponent implements OnInit {
     },
   ]
   avatarUrl = './assets/img/avatar3.jpg'
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
 
+  back(){
+    this.router.navigate(['home'])
+  }
 }
