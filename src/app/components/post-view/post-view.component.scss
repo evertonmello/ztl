@@ -1,0 +1,63 @@
+.cardImg{
+    width : 100%;    
+    min-height: 150px;
+    min-width: 28px;
+}
+
+.title{
+  font-size: 18px;
+  color: #E9E2E1;
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    background-color: black;
+    height: 40px;
+    width: 100%;z-index: 1;opacity: 0.3;
+    display: flex;
+    padding-top: 15px;
+}
+
+cooltz-icons{
+  margin-left: 15px;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  background-color: #1F1E1D;
+  height: 50px;
+  width: 100%;
+}
+input{
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+}
+.tags{
+  margin-bottom: 10px;
+}
+.commnets{
+  padding-top: 5px;
+    margin-bottom: 25px;
+    border-top: solid 1px #555251;
+}
+
+.btn{
+  width: 100px;
+  height: 32px;
+  background-color: #F13B40;
+  border: 0;
+  border-radius: 7px;
+  color: white;
+  position: absolute;
+  right: 9px;
+  bottom: 9px;
+}
+
+.commentContainer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

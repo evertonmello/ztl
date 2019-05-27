@@ -1,0 +1,30 @@
+<div style="position: absolute; width: 100%; height: 100%;">
+  <div class="header">
+    <cooltz-icons [name]="'leftArrow'" [width]="'25'" [color]="'white'"></cooltz-icons>
+    <h1 class="title">Postagem</h1> 
+  </div>
+  <img src="./assets/img/a_star.jpg" alt="" class="cardImg"> 
+  
+  <div style="margin: 0 24px 50px 24px">
+    
+    <list-contact [showBtn]="false" [contacts]="contacts"></list-contact>
+    <div style="margin: 16px 0 8px 0;">
+        <h1 class="defaultTitle">Será que artista tem que se posicionar?</h1>
+    </div>
+    <h2 class="defaultTxt">Nesses tempos de confusão politica em que vivemos, vale lembrar que na época da ditadura, muitos artistas se arriscaram pra deixar clara sua posição, um deles era o Chico Buarque. Vivamus at interdum elit. Donec fringilla metus ac consectetur laoreet. Aliquam magna nibh, congue sit amet blandit sed, commodo a enim. Vivamus faucibus nisl ut rhoncus malesuada. 
+        Morbi vel convallis augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent vitae elit ut ligula gravida vehicula. torquent per conubia nostra, per inceptos himenaeos.</h2>
+    <div class="tags">
+
+    </div>
+    <div class="commnets" *ngFor="let comment of comments" >
+        <list-contact [showBtn]="false" [avatarUrl]="avatarUrl" [contacts]="contacts"></list-contact>
+        <h2 class="defaultTxt">{{comment.txt}}</h2>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="commentContainer">
+        <input type="text" placeholder="Escreva seu comentário">
+        <button class="btn">Comentar</button>
+    </div>
+  </div>
+</div>

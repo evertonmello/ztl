@@ -17,6 +17,7 @@ import { CardComponent } from './components/home/card/card.component';
 import { ListContactComponent } from './components/list-contact/list-contact.component';
 import { SearchAComponent } from './components/search/search.component';
 import { NewPostComponent } from './components/new-post/new-post.component';
+import { PostViewComponent } from './components/post-view/post-view.component';
 import { ResultAllComponent } from './components/search/result-all/result-all.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SearchResultComponent } from './components/search/search-result/search-result.component';
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
   { path: 'login',      component: LoginComponent,data: {animation: 'loginPage'} },
   { path: 'profile',      component: ProfileComponent,data: {animation: 'profile'} },
   { path: 'newPost',      component: NewPostComponent,data: {animation: 'newPost'} },
+  { path: 'postView',      component: PostViewComponent,data: {animation: 'postView'} },
   { path: 'search',      component: SearchAComponent, data:{ animation:'search' }},
   { path: 'resultAll',      component: ResultAllComponent, data:{ animation:'resultAll' }},
   { path: 'search/:opt',      component: SearchAComponent, data:{ animation:'search'} },
@@ -49,6 +51,7 @@ const appRoutes: Routes = [
     BackHeaderComponent,
     HomeComponent,
     ProfileComponent,
+    PostViewComponent,
     CardComponent,
     ResultAllComponent,
     ListContactComponent,

@@ -9,7 +9,7 @@
     <mat-tab label="Música">
         <div class="block1 feed" >
            <div #feed class="feedContainer">
-                <div *ngFor="let card of cards;"  (swiperight)="swipe('right feed')" (swipeleft)="swipe('left')"  class="card">
+                <div *ngFor="let card of cards;"  (swiperight)="swipe('right feed')" (swipeleft)="swipe('left')" [style.touch-action]="'pan-y'" class="card">
                         <app-card [avatarUrl]="card"></app-card>
                 </div>
             </div>
