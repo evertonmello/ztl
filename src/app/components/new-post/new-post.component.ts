@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class NewPostComponent implements OnInit {
 
+  pubPost = false;
   lastPage;
   selectedTab;
   
@@ -52,6 +53,10 @@ export class NewPostComponent implements OnInit {
       postSearch: true,
       selectedTab: this.selectedTab} 
    });
+  }
+
+  tglPrivacy(){
+    this.pubPost = !this.pubPost;
   }
 
 }
