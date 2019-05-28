@@ -1,7 +1,54 @@
+.mainContainer{
+  position: absolute; 
+  width: 100%;
+   height: 100%;
+}
 .cardImg{
     width : 100%;    
     min-height: 150px;
     min-width: 28px;
+}
+
+.defaultTitle{
+
+  &.post{
+    width: 80%;
+  }
+
+  &.cmt{
+    position: absolute;
+    top: 0;
+    right: 26px;
+  }
+
+  &.time{
+    position: absolute;
+    top: 20px;
+    right: 14px;
+  }
+}
+.menuIcon{
+  position: absolute;
+  right: -5px;
+  top: 20px;
+}
+
+.cmtIcon{
+  top: 0;
+  right: 1px;
+  position: absolute;
+  
+}
+
+.titleBox{
+  margin: 16px 0 8px 0;
+  position: relative;
+}
+.menuContainer{
+  position: absolute;
+  top: 5px;
+  right: 4px;
+  display: table;
 }
 
 .title{
@@ -19,7 +66,9 @@
     padding-top: 15px;
 }
 
-
+.descPostCtn{
+  margin: 0 24px 50px 24px;
+}
 .tag{
   background-color: #BDB6B6;
   color: #161514;
@@ -29,7 +78,21 @@
   border-radius: 4px;
   padding: 4px;
   margin-top: 15px;
+  margin-right: 5px;
 
+  &.topic{
+
+  }
+
+}
+
+
+
+h3{
+  margin: 0;
+  position: absolute;
+  right: 8px;
+  top: 5px;
 }
 cooltz-icons{
   margin-left: 15px;
@@ -42,10 +105,18 @@ cooltz-icons{
   height: 50px;
   width: 100%;
 }
-input{
+textarea{
   width: 100%;
-  height: 100%;
+  height: 31px;
+  background-color: transparent;
+  color: #BDB6B6;
+  padding-top: 15px;
+  padding-right: 113px;
   padding-left: 15px;
+  width: 100%;
+  font-family: HKGrotesk;
+  border-radius: 10px;
+  width: calc(100% - 131px);
 }
 .tags{
   margin-bottom: 20px;
@@ -54,6 +125,7 @@ input{
   padding-top: 5px;
     margin-bottom: 25px;
     border-top: solid 1px #555251;
+    position: relative;
 }
 
 .btn{
