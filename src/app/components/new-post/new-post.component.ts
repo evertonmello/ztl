@@ -1,8 +1,7 @@
 import { Component, OnInit, ɵConsole } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
-import { MAT_CHIPS_DEFAULT_OPTIONS } from '@angular/material';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+declare var Quill;
+var Delta = Quill.import('delta');
 
 @Component({
   selector: 'app-new-post',
@@ -14,17 +13,18 @@ export class NewPostComponent implements OnInit {
   pubPost = false;
   lastPage;
   selectedTab;
-  
-  bold = false;
+  postDraft;
+
+/*   bold = false;
   italic = false;
   underline = false;
   strikeThrough = false;
-  justifyLeft = false;
-  justifyCenter = false;
-  justifyRight = false;
-  justifyFull = false;
+  left = false;
+  center = false;
+  right = false;
+  justify = false;
   insertUnorderedList = false;
-  buttons = ['bold','italic','underline','strikeThrough','justifyLeft','justifyCenter','justifyRight','justifyFull','insertUnorderedList','camera']
+  buttons = ['bold','italic','underline','strikeThrough','left','center','right','justify','insertUnorderedList','camera'] */
   camera = false;
 
   constructor(private router:Router, private activatedRoute:ActivatedRoute) {
@@ -35,12 +35,29 @@ export class NewPostComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.setUpTxtFormatRecorder()
   }
 
-  setStyle(style){
-    document.execCommand(style, false, '');
-    var styleVar = style.replace("-", "_");
-    this[styleVar] = !this[styleVar];
+  setUpTxtFormatRecorder(){
+    var toolbarOptions = [
+      ['bold'],['italic'], ['underline'],[ 'strike'],  
+      [ { 'list': 'bullet' }],
+      [{ 'align': [] }]
+    ];
+    this.postDraft = new Quill('#post', {
+      modules: { toolbar: toolbarOptions },
+      theme: 'snow'
+    });
+    this.postDraft.setContents(JSON.parse(window.localStorage.getItem("rascunho")));
+
+    this.postDraft.on('text-change', ()=> {
+        window.localStorage.setItem("rascunho", JSON.stringify(this.postDraft.getContents()))
+    });
+  }
+
+
+  save(){
+
   }
   
   tglBtn(btn){

@@ -4,7 +4,7 @@
       <cooltz-icons (click)="close()" [name]="'clear'" [width]="'25'" [color]="'#E9E2E1'"></cooltz-icons>
       <h1 class="title">Nova publicação</h1>
       <button class="addBtn">
-        <h2 class="addBtnTxt">Publicar</h2>
+        <h2 class="addBtnTxt" (click)="save()">Publicar</h2>
       </button>
     </div>
     <div class="secontCtn">
@@ -13,16 +13,15 @@
       <h2 class="changeTopic">Trocar o assunto</h2>
     </div>
   </div>
-  <div class="editIconsContainer">
+<!--   <div class="editIconsContainer">
     <button *ngFor="let button of buttons" >
         <cooltz-icons (click)="setStyle(button)" [name]="button" [width]="'20'" [color]="tglBtn(button)?'#FFFBF7':'#8E8988'">
           </cooltz-icons>
     </button>
-  </div>
+  </div> -->
   <div class="iptContainer">
-    <div class="txtArea" contenteditable>
-      <h3 class="postText">Texto</h3>
-    </div>
+      <div id="post">
+      </div>
   </div>
   <div class="postTypeContainer">
     <h3 class="tglText">POSTAGEM PÚBLICA? </h3>
