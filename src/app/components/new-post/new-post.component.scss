@@ -18,6 +18,7 @@ button{
     position: absolute;
     right: 6%;
     top: 104px;
+    z-index: 3;
 }
 
 @media screen and (max-width: 350px) { 
@@ -290,4 +291,8 @@ input:focus + .slider {
 
 :host /deep/ .ql-editor{
     color: #ADA8A7
+}
+
+:host /deep/ .ql-align-center img{
+    display: none;
 }
