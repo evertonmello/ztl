@@ -7,6 +7,14 @@
     <feature name="ContactsPhoneNumbers">
         <param name="android-package" value="com.dbaq.cordova.contactsPhoneNumbers.ContactsManager" />
     </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
     <name>Cooltz</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -26,4 +34,5 @@
     <icon src="./www/assets/icons/cooltzIco.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="Orientation" value="portrait" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
 </widget>

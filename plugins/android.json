@@ -12,6 +12,12 @@
     },
     "cordova-plugin-contacts-phonenumbers": {
       "PACKAGE_NAME": "io.cordova.cooltz"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "io.cordova.cooltz"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "io.cordova.cooltz"
     }
   },
   "dependent_plugins": {}

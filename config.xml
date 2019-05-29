@@ -8,7 +8,8 @@
         Apache Cordova Team
     </author>
     <content src="index.html" />
-    <plugin name="cordova-plugin-contacts-phonenumber" spec="1" />
+    <!-- <plugin name="cordova-plugin-contacts-phonenumber" spec="1" /> -->
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -20,6 +21,7 @@
     <platform name="android">
         <allow-intent href="market:*" />
         <preference name="Orientation" value="portrait" />
+        <preference name="AndroidPersistentFileLocation" value="Compatibility" />
         <icon src="./www/assets/icons/cooltzIco.png" />
     </platform>
     <platform name="ios">
