@@ -232,6 +232,11 @@ input:focus + .slider {
 } */
 
 :host /deep/.ql-formats{
+    width: 12.5%;
+    margin: 0;
+}
+
+:host /deep/.ql-formats:last-child{
     width: 13%;
     margin: 0;
 }
