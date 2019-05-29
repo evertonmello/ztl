@@ -14,6 +14,12 @@ button{
     border: 0;
 }
 
+.cameraCtn{
+    position: absolute;
+    right: 6%;
+    top: 104px;
+}
+
 @media screen and (max-width: 350px) { 
         
     .headerBox{
@@ -268,4 +274,20 @@ input:focus + .slider {
 
 :host /deep/ .ql-snow.ql-toolbar button.ql-active .ql-fill{
     fill:#FFFBF7 !important;
+}
+
+:host /deep/ .ql-snow .ql-stroke{
+    stroke: #8E8988;
+}
+
+:host /deep/ .ql-snow .ql-fill, .ql-snow .ql-stroke.ql-fill{
+    fill: #8E8988;
+}
+
+:host /deep/ .ql-snow .ql-picker-options{
+    background-color: #212020;
+}
+
+:host /deep/ .ql-editor{
+    color: #ADA8A7
 }

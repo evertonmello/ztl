@@ -5,7 +5,7 @@
   </div>
   <img src="./assets/img/a_star.jpg" alt="" class="cardImg"> 
 
-  <div class="descPostCtn">
+  <div id="descPostCtn" class="descPostCtn" >
     
     <div style="position: relative" >
       <list-contact [showBtn]="false" [contacts]="contacts"></list-contact>
@@ -34,8 +34,8 @@
   </div>
   <div class="footer">
     <div class="commentContainer">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Escreva seu comentário"></textarea>
-        <button class="btn">Comentar</button>
+          <textarea [(ngModel)]="comment" cols="30" rows="10" placeholder="Escreva seu comentário"></textarea>
+        <button (click)="addComment()" class="btn">Comentar</button>
     </div>
   </div>
 </div>

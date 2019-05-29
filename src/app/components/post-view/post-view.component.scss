@@ -8,7 +8,9 @@
     min-height: 150px;
     min-width: 28px;
 }
-
+.defaultTxt{
+  margin-top: 5px;
+}
 .defaultTitle{
 
   &.post{
@@ -120,6 +122,11 @@ textarea{
     border-top: solid 1px #555251;
     position: relative;
 }
+.commnets:last-child{
+  margin-bottom: 75px;
+}
+
+
 
 .btn{
   width: 100px;

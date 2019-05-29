@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { interval } from 'rxjs';
+declare var document
 @Component({
   selector: 'post-view',
   templateUrl: './post-view.component.html',
@@ -12,7 +13,7 @@ export class PostViewComponent implements OnInit {
     firstName: 'asddsa',
     nickname: '@adasd'
   }];
-
+  comment = ""
   comments = [
     {
       txt:"comentarioadsdasd .sad.das. dsa..das.ds  comentarioadsdasd .sad.das. dsa.. comentarioadsdasd .sad.das. dsa..comentarioadsdasd .sad.das. dsa..comentarioadsdasd .sad.das. dsa..comentarioadsdasd .sad.das. dsa.."
@@ -49,9 +50,20 @@ export class PostViewComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit() {
+    window.scroll(0,0)
   }
 
   back(){
     this.router.navigate(['home'])
   }
+
+
+  addComment() {
+    this.comments.push({txt:this.comment})
+    this.comment = ""
+    setTimeout(() => {
+      window.scroll(0, document.getElementById('descPostCtn').clientHeight)
+    }, 50);
+  }
+
 }
