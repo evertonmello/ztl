@@ -62,7 +62,8 @@ export class PostViewComponent implements OnInit {
     this.comments.push({txt:this.comment})
     this.comment = ""
     setTimeout(() => {
-      window.scroll(0, document.getElementById('descPostCtn').clientHeight)
+      window.scrollTo({ left: 0, top: document.getElementById('descPostCtn').clientHeight, behavior: 'smooth' });
+
     }, 50);
   }
 

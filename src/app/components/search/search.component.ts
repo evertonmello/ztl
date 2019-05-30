@@ -37,8 +37,32 @@ export class SearchAComponent implements OnInit, AfterViewInit {
     header: '',
     desc: ''
   }
+  showSuggestions = false;
   searchCategories = [];
-  
+  suggestionsNames = ['generic', 'songs', 'movies']
+  suggestions = {
+    generic: [
+      {name: 'Lady Gaga',desc:'desc desc',image: ''},
+      {name: 'Ladytron',imagedesc:'desc desc',image: ''},
+      {name: 'Lady Antebellum',desc:'',image: ''}
+    ],
+    songs: [
+      {name: 'Lady Gaga',desc:'desc desc',image: ''},
+      {name: 'Ladytron',imagedesc:'desc desc',image: ''},
+      {name: 'Lady Antebellum',desc:'',image: ''},
+      {name: 'Lady Gaga',desc:'',image: ''},
+      {name: 'Ladytron',imagedesc:'',image: ''},
+      {name: 'Lady Antebellum',desc:'',image: ''},
+    ],
+    movies: [
+      {name: 'Lady Gaga',desc:'desc desc',image: ''},
+      {name: 'Ladytron',imagedesc:'desc desc',image: ''},
+      {name: 'Lady Antebellum',desc:'',image: ''},
+      {name: 'Lady Gaga',desc:'',image: ''},
+      {name: 'Ladytron',imagedesc:'',image: ''},
+      {name: 'Lady Antebellum',desc:'',image: ''},
+    ],
+  }
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     this.activatedRoute.queryParams.subscribe(params => {
       this.setUpSearch(params)
@@ -49,7 +73,7 @@ export class SearchAComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.ipt.nativeElement.focus()
+   // this.ipt.nativeElement.focus()
   }
 
   setUpSearch(params){
@@ -90,13 +114,14 @@ export class SearchAComponent implements OnInit, AfterViewInit {
         this.content.title = "O QUE VOCÊ ASSISTIU?"
         this.content.desc = 'Pesquise pelo título.'
         break;
-      case 'Listen':
+      case 'reading':
         this.content.title = "O QUE VOCÊ ESTÁ LENDO?"
         this.content.desc = 'Pesquise pelo título.'
         break;
       case 'search':
         this.content.title = "O QUE VOCÊ ESTÁ BUSCANDO?"
         this.content.desc = 'Pesquise por pessoas, artistas ou títulos de obras.'
+        this.showSuggestions = true;
         break;
       case 'Listen':
         this.content.title = "NENHUM RESULTADO ENCONTRADO"

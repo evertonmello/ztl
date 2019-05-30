@@ -1,30 +1,47 @@
 <!-- capa da busca (o que está buscando) -->
-<div *ngIf="!resultPage" >
-        <back-header (back)="backPage()" [shadow]="true" [title]="'Nova publicação'"></back-header>    
-        <h1 class="title">{{content.title}}</h1>
-        <div class="iptBox" >
-            <input type="text" #ipt autofocus class="inputResult">
-            <cooltz-icons (click)="search()" class="searchIco" [name]="'search'" [width]="'25'" [color]="'white'"></cooltz-icons>
+<div *ngIf="!resultPage">
+    <back-header (back)="backPage()" [shadow]="true" [title]="'Nova publicação'"></back-header>
+    <h1 class="title">{{content.title}}</h1>
+    <div class="iptBox">
+        <input type="text" #ipt autofocus class="inputResult">
+        <cooltz-icons (click)="search()" class="searchIco" [name]="'search'" [width]="'25'" [color]="'white'">
+        </cooltz-icons>
+    </div>
+    <h2 class="desc">{{content.desc}}</h2>
+
+    <div *ngIf="showSuggestions">
+        <div *ngFor="let suggestionsName of suggestionsNames">
+            <h1 class="sugTitle">{{suggestionsName}}</h1>
+            <div *ngFor="let suggestion of suggestions[suggestionsName]" class="sugContainer">
+                <img class="avatar sug" src="./assets/img/avatar1.jpg" alt="profileImage" width="38" height="38">
+                <div class="namesContainer">
+                    <h2 class="itemName">{{suggestion.name}}</h2>
+                    <h3 *ngIf="suggestion.desc" class="itemDesc">{{suggestion.desc}}</h3>
+                </div>
+            </div>
         </div>
-        <h2 class="desc">{{content.desc}}</h2>
-    
+    </div>
 </div>
 <!--  -->
 
-<div *ngIf="resultPage"   class="main">
-    <back-header  (back)="backPage()"></back-header>    
-     <div class="icoCtnr">
-        <input #ipt (keyup)="checkIcon(ipt)" type="text"  autofocus >
-        <cooltz-icons *ngIf="icoOpt == 'clear'"   [name]="'clear'" [width]="'30'" [color]="'white'" class="ico"></cooltz-icons>
-        <cooltz-icons  *ngIf="icoOpt == 'search'"  [name]="'search'" [width]="'24'" [color]="'white'" class="ico s"></cooltz-icons>
-    </div> 
-    
+<!-- Tela de busca com todas abas -->
+<div *ngIf="resultPage" class="main">
+    <back-header (back)="backPage()"></back-header>
+    <div class="icoCtnr">
+        <input #ipt (keyup)="checkIcon(ipt)" type="text" autofocus>
+        <cooltz-icons *ngIf="icoOpt == 'clear'" [name]="'clear'" [width]="'30'" [color]="'white'" class="ico">
+        </cooltz-icons>
+        <cooltz-icons *ngIf="icoOpt == 'search'" [name]="'search'" [width]="'24'" [color]="'white'" class="ico s">
+        </cooltz-icons>
+    </div>
+
     <mat-tab-group [(selectedIndex)]="selectedTab" mat-stretch-tabs>
-        <mat-tab   *ngFor="let item of searchCategories; let i = index" label="{{item}}"  >
-            <div  class="content">
-                <list-contact *ngIf="i == 0 && !postSearch"  [contacts]="contacts"></list-contact>
-                <search-result [postSearch]="postSearch" [selectedTab]="selectedTab" [lastPage]="'search'" *ngIf="i != 0 || postSearch" ></search-result>
+        <mat-tab *ngFor="let item of searchCategories; let i = index" label="{{item}}">
+            <div class="content">
+                <list-contact *ngIf="i == 0 && !postSearch" [contacts]="contacts"></list-contact>
+                <search-result [postSearch]="postSearch" [selectedTab]="selectedTab" [lastPage]="'search'"
+                    *ngIf="i != 0 || postSearch"></search-result>
             </div>
         </mat-tab>
     </mat-tab-group>
-</div> 
+</div>
