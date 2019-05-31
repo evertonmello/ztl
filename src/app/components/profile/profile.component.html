@@ -1,7 +1,7 @@
 <div style="position: relative">
     <back-header (back)="backPage()" [title]="'profile name'" [shadow]="true"></back-header>
     <cooltz-icons [name]="'bell'" [width]="'25'" [color]="'white'" class="icoNtf"></cooltz-icons>
-    <cooltz-icons (touchstart)="goToSearch()" [name]="'search'" [width]="'25'" [color]="'white'" class="icoSearch"></cooltz-icons>
+    <cooltz-icons (tap)="goToSearch()" [name]="'search'" [width]="'25'" [color]="'white'" class="icoSearch"></cooltz-icons>
 </div>
 <div class="profileBox">
     <img src="./assets/img/avatar0.jpg" alt="" width="110" height="110" class="profileImg" >

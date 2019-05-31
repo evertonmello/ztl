@@ -23,7 +23,7 @@
         <h3>Senha</h3>
         <div style="position: relative;">
             <input type="{{iptType}}" (keyup)="checkPass($event)" [(ngModel)]="password" >
-            <cooltz-icons (touchstart)="togglePassword()" [name]="'eye'" [width]="23" [color]="'white'" class="eye"></cooltz-icons>
+            <cooltz-icons (tap)="togglePassword()" [name]="'eye'" [width]="23" [color]="'white'" class="eye"></cooltz-icons>
         </div>
         
         <h3><cooltz-icons class="passIcons" [name]="passwordVldt.upper? 'checked':'unchecked'" [width]="'18'"></cooltz-icons>Letra maiúscula</h3>
@@ -44,7 +44,7 @@
 
     <div *ngIf="step == 3" class="termContainer">
             <mat-checkbox [(ngModel)]="termChecked"></mat-checkbox>
-            <h3 (touchstart)="termChecked = !termChecked" class="termText" >Eu li e aceito os termos de uso.</h3>            
+            <h3 (tap)="termChecked = !termChecked" class="termText" >Eu li e aceito os termos de uso.</h3>            
     </div>
 
     <section *ngIf="step == 4">
@@ -54,13 +54,13 @@
     
 
     <button *ngIf="step != 4" class="btn" [ngClass]="{'disabled': step == 3 && !termChecked ||  step == 2  && !validPassword }" >
-        <h2 class="textButtons" (touchstart)="nextStep()">Próximo</h2>
+        <h2 class="textButtons" (tap)="nextStep()">Próximo</h2>
     </button>   
     <button *ngIf="step == 4" class="btn">
-        <h2 class="textButtons" (touchstart)="goToAddContacts()">Adicionar amigos</h2>
+        <h2 class="textButtons" (tap)="goToAddContacts()">Adicionar amigos</h2>
     </button>
     <button *ngIf="step == 4" class="btn">
-        <h2 class="textButtons" (touchstart)="goToHome()">Entrar na COOLTZ</h2>
+        <h2 class="textButtons" (tap)="goToHome()">Entrar na COOLTZ</h2>
     </button>
 
 </div>

@@ -19,11 +19,11 @@
       </mat-checkbox>
                   
 
-      <button *ngIf="inputView != 2" (touchstart)="showInput()" class="btn"><h1>Entrar</h1></button>
+      <button *ngIf="inputView != 2" (tap)="showInput()" class="btn"><h1>Entrar</h1></button>
 
       <!-- NEWACCOUNT -->
       <h2 *ngIf="inputView == 2 && emailErrorMsg"  class="descLbl desc msg"  >{{emailErrorMsg}}</h2>
-      <button *ngIf="inputView == 2 || inputView == 0" class="btn" (touchstart)="validateEmail()"><h1>Próximo</h1></button>
+      <button *ngIf="inputView == 2 || inputView == 0" class="btn" (tap)="validateEmail()"><h1>Próximo</h1></button>
     </div>
   </div>
 </div>

@@ -1,8 +1,8 @@
 <div class="menuContainer">
-    <img class="avatar" (touchstart)="goToMyProfile()" src="./assets/img/avatar1.jpg" alt="profileImage" width="30" height="30">
+    <img class="avatar" (tap)="goToMyProfile()" src="./assets/img/avatar1.jpg" alt="profileImage" width="30" height="30">
     <h1 class="title">Início</h1>
     <cooltz-icons [name]="'bell'" [width]="'25'" [color]="'white'" class="menuIcons"></cooltz-icons>
-    <cooltz-icons (touchstart)="search()" [name]="'search'" [width]="'25'" [color]="'white'" class="menuIcons">
+    <cooltz-icons (tap)="search()" [name]="'search'" [width]="'25'" [color]="'white'" class="menuIcons">
     </cooltz-icons>
 </div>
 <mat-tab-group animationDuration="30ms" mat-stretch-tabs>
@@ -37,17 +37,17 @@
     </mat-tab>
 </mat-tab-group>
 <div class="btnPost">
-    <cooltz-icons (touchstart)="showOverlay();searchToPost(false, 'topic')"
+    <cooltz-icons (tap)="showOverlay();searchToPost(false, 'topic')"
         style="display: table-cell; vertical-align: middle;" [name]="'pen'" [color]="'white'" [width]="'30'">
     </cooltz-icons>
 </div>
-<div *ngIf="overlay" (touchstart)="showOverlay()" class="overlay">
+<div *ngIf="overlay" (click)="showOverlay()" class="overlay">
     <div class="ovlBoxContainer">
         <h1>NOVA PUBLICAÇÃO</h1>
         <br>
         <h2 class="newPostDesc">O que estou ouvindo agora?</h2>
         <div class="iconOvlContainer">
-            <cooltz-icons (touchstart)="searchToPost(true, 'listen')" class="headphoneIco" [name]="'headphone'"
+            <cooltz-icons (tap)="searchToPost(true, 'listen')" class="headphoneIco" [name]="'headphone'"
                 [color]="'white'" [width]="'35'"></cooltz-icons>
         </div>
         <h2 class="newPostDescB">Sobre o que você quer falar?</h2>

@@ -1,10 +1,10 @@
 <div class="main">
   <div class="headerBox">
     <div class="newPost">
-      <cooltz-icons (touchstart)="close()" [name]="'clear'" [width]="'25'" [color]="'#E9E2E1'"></cooltz-icons>
+      <cooltz-icons (tap)="close()" [name]="'clear'" [width]="'25'" [color]="'#E9E2E1'"></cooltz-icons>
       <h1 class="title">Nova publicação</h1>
       <button class="addBtn">
-        <h2 class="addBtnTxt" (touchstart)="save()">Publicar</h2>
+        <h2 class="addBtnTxt" (tap)="save()">Publicar</h2>
       </button>
     </div>
     <div class="secontCtn">
@@ -16,7 +16,7 @@
 
 <!--   <div class="editIconsContainer">
     <button *ngFor="let button of buttons" >
-        <cooltz-icons (touchstart)="setStyle(button)" [name]="button" [width]="'20'" [color]="tglBtn(button)?'#FFFBF7':'#8E8988'">
+        <cooltz-icons (tap)="setStyle(button)" [name]="button" [width]="'20'" [color]="tglBtn(button)?'#FFFBF7':'#8E8988'">
           </cooltz-icons>
     </button>
   </div> -->
@@ -29,8 +29,8 @@
     <label class="switch">
         <input type="checkbox" checked>
         <span class="slider round"></span>
-        <h2 *ngIf="pubPost" (touchstart)="tglPrivacy()" class="txtTgl">Não</h2>
-        <h2 *ngIf="!pubPost"  (touchstart)="tglPrivacy()" class="txtTglY">Sim</h2>
+        <h2 *ngIf="pubPost" (tap)="tglPrivacy()" class="txtTgl">Não</h2>
+        <h2 *ngIf="!pubPost"  (tap)="tglPrivacy()" class="txtTglY">Sim</h2>
 
     </label>
   </div>
