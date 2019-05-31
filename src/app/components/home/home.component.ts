@@ -27,6 +27,9 @@ export class HomeComponent implements OnInit {
     window.localStorage.setItem('isLogged', 'true')
   }
 
+  a(){
+    alert("!")
+  }
   swipe(dir){
     let elements = this.elem.nativeElement.querySelectorAll('.cardContainer');
 

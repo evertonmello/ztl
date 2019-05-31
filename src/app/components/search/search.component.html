@@ -4,7 +4,7 @@
     <h1 class="title">{{content.title}}</h1>
     <div class="iptBox">
         <input type="text" #ipt autofocus class="inputResult">
-        <cooltz-icons (click)="search()" class="searchIco" [name]="'search'" [width]="'25'" [color]="'white'">
+        <cooltz-icons (touchstart)="search()" class="searchIco" [name]="'search'" [width]="'25'" [color]="'white'">
         </cooltz-icons>
     </div>
     <h2 class="desc">{{content.desc}}</h2>

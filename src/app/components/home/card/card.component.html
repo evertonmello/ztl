@@ -1,9 +1,9 @@
-<div class="cardContainer" (click)="goToPost()">
+<div class="cardContainer" (touchstart)="goToPost()">
     <img src="{{avatarUrl}}" alt="" class="cardImg">
 
     <div class="menuContainer">
         <h3 class="tag">3m</h3>
-        <cooltz-icons (click)="goToPost()" [name]="'menu'" [width]="22" [color]="'white'" class="menuIcon"></cooltz-icons>
+        <cooltz-icons (touchstart)="goToPost()" [name]="'menu'" [width]="22" [color]="'white'" class="menuIcon"></cooltz-icons>
     </div>
 
     <div class="previewContainer">

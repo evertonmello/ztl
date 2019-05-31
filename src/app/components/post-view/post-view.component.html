@@ -1,6 +1,6 @@
 <div class="mainContainer">
   <div class="header">
-    <cooltz-icons (click)="back()" [name]="'leftArrow'" [width]="'25'" [color]="'white'"></cooltz-icons>
+    <cooltz-icons (touchstart)="back()" [name]="'leftArrow'" [width]="'25'" [color]="'white'"></cooltz-icons>
     <h1 class="title">Postagem</h1> 
   </div>
   <img src="./assets/img/a_star.jpg" alt="" class="cardImg"> 
@@ -35,7 +35,7 @@
   <div class="footer">
     <div class="commentContainer">
           <textarea [(ngModel)]="comment" cols="30" rows="10" placeholder="Escreva seu comentário"></textarea>
-        <button (click)="addComment()" class="btn">Comentar</button>
+        <button (touchstart)="addComment()" class="btn">Comentar</button>
     </div>
   </div>
 </div>

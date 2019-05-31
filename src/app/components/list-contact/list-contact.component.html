@@ -5,7 +5,7 @@
            <h3 class="name">{{contact.firstName}}</h3>
         <h3 class="nick">{{contact.nickname}}</h3> 
     </div>
-    <div *ngIf="showBtn"  (click)="addContact(contact)" class="addBtn" [ngClass]="{'added':contact.added}" >
+    <div *ngIf="showBtn"  (touchstart)="addContact(contact)" class="addBtn" [ngClass]="{'added':contact.added}" >
         <h2 class="addBtnTxt" [ngClass]="{'added':contact.added}">{{contact.added? 'Solicitado':'Adicionar'}}</h2>
     </div>
 </div>

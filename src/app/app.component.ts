@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet, Router } from '@angular/router';
 import { slide } from './animations';
+import {Renderer2} from '@angular/core';
 
 
 declare var device;
@@ -21,15 +22,23 @@ export class AppComponent {
   url = './assets/img/avatar1.jpg'
   logged = false
 
-  constructor(private router:Router){
+  constructor(private router:Router,private renderer: Renderer2){
 
   }
+
 
   ngOnInit() {
     this.logged = window.localStorage.getItem('isLogged')? JSON.parse(window.localStorage.getItem('isLogged')):false;
     if(this.logged ){
       this.router.navigateByUrl('home')
     }
+
+    const devicebackbutton = this.renderer.listen('document', 'backbutton', e => {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    });
+    console.log(devicebackbutton)
   } 
 
   prepareRoute(outlet: RouterOutlet) {
