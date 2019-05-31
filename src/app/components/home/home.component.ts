@@ -17,13 +17,14 @@ export class HomeComponent implements OnInit {
   overlay = false;
   currentCard = 0;
   px = 0
+  isLogged = false;
   @ViewChild('feed')feed :ElementRef
   constructor(private _sanitizer: DomSanitizer,private router: Router,
     private activatedRoute: ActivatedRoute, private elem: ElementRef) {
   }
 
   ngOnInit() {
-
+    window.localStorage.setItem('isLogged', 'true')
   }
 
   swipe(dir){
