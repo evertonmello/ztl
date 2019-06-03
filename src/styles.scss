@@ -5,11 +5,15 @@
     src: url('./assets/fonts/HKGrotesk-Regular.otf') format("opentype");
 }
 
+html{
+    touch-action: manipulation;
+}
 html,body{
     height: 100%;
     margin: 0;
     width: 100%;
 }
+
 body{
       background-color: #212020;
       display: contents;

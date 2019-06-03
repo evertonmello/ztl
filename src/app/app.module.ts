@@ -13,7 +13,10 @@ import { LoginComponent } from './components/login/login.component';
 import { NewAccountComponent } from './components/new-account/new-account.component';
 import { AddContactsComponent } from './components/add-contacts/add-contacts.component';
 import { HomeComponent } from './components/home/home.component';
+import { NotificationsComponent } from './components/widgets/notifications/notifications.component'
+import { NotificItemComponent } from './components/widgets/notifications/notific-item/notific-item.component'
 import { CardComponent } from './components/home/card/card.component';
+import { AllNotificationsComponent } from './components/all-notifications/all-notifications.component';
 import { ListContactComponent } from './components/list-contact/list-contact.component';
 import { SearchAComponent } from './components/search/search.component';
 import { NewPostComponent } from './components/new-post/new-post.component';
@@ -30,6 +33,7 @@ const appRoutes: Routes = [
   { path: 'addContacts',      component: AddContactsComponent ,data: {animation: 'addContactsPage'} },
   { path: 'login',      component: LoginComponent,data: {animation: 'loginPage'} },
   { path: 'profile',      component: ProfileComponent,data: {animation: 'profile'} },
+  { path: 'notifications',      component: AllNotificationsComponent,data: {animation: 'notifications'} },
   { path: 'newPost',      component: NewPostComponent,data: {animation: 'newPost'} },
   { path: 'postView',      component: PostViewComponent,data: {animation: 'postView'} },
   { path: 'search',      component: SearchAComponent, data:{ animation:'search' }},
@@ -48,11 +52,14 @@ const appRoutes: Routes = [
     SearchResultComponent,
     AddContactsComponent,
     NewPostComponent,
+    AllNotificationsComponent,
     BackHeaderComponent,
     HomeComponent,
     ProfileComponent,
     PostViewComponent,
     CardComponent,
+    NotificItemComponent,
+    NotificationsComponent,
     ResultAllComponent,
     ListContactComponent,
     CooltzIconsComponent,

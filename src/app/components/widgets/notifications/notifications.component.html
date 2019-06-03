@@ -1,0 +1,10 @@
+<div (tap)="tglPreview()" class="iconContainer">
+  <cooltz-icons [name]="'bell'" [width]="'25'" [color]="'white'" class="menuIcons"></cooltz-icons>
+  <div class="ntfcContainer">
+    <h1 class="ntfcDesc">{{ '+' +  notifcs}}</h1>
+  </div>
+</div>
+<div *ngIf="showPreview"  class="preview">
+  <notific-item *ngFor="let ntfcation of ntfcations" ></notific-item>
+  <h1 (tap)="openAllNotfc()" class="seeAllTxt">Ver todas notificações</h1>
+</div>

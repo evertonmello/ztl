@@ -14,10 +14,11 @@ export class HomeComponent implements OnInit {
   url = "./assets/img/bey.jpg"
   cards = ['./assets/img/avengers.jpg','./assets/img/shazam.png','./assets/img/a_star.jpg','./assets/img/avatar3.jpg']
   friendsFavs = [1,2,3,4,5,6,7,8];
-  overlay = false;
-  currentCard = 0;
+  overlay : boolean = false;
+  currentCard= 0;
   px = 0
   isLogged = false;
+  blurHome = false
   @ViewChild('feed')feed :ElementRef
   constructor(private _sanitizer: DomSanitizer,private router: Router,
     private activatedRoute: ActivatedRoute, private elem: ElementRef) {
@@ -27,9 +28,13 @@ export class HomeComponent implements OnInit {
     window.localStorage.setItem('isLogged', 'true')
   }
 
-  a(){
-    alert("!")
+  hideNtfc(){
+    this.blurHome = false;
   }
+  setNtfView(event){
+    this.blurHome = event;
+  }
+
   swipe(dir){
     let elements = this.elem.nativeElement.querySelectorAll('.cardContainer');
 
@@ -66,7 +71,6 @@ export class HomeComponent implements OnInit {
   }
 
   searchToPost(triggerBtn, content){
-    console.log(triggerBtn, content)
     if(!this.overlay || triggerBtn ){
       this.router.navigate(['/search'], { queryParams: { coverView: content, postSearch : true} });
     }

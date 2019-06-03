@@ -107,7 +107,7 @@ export class SearchResultComponent implements OnInit {
 constructor(private router:Router) { }
 
   ngOnInit() {
-    console.log(this.array.length)
+  //  console.log(this.array.length)
   }
 
   getContentArray(index){

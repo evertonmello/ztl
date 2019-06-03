@@ -35,9 +35,18 @@
 
 }
 
+.blur{
+   filter: blur(8px);
+
+   &.btn{
+       pointer-events: none;
+   }
+}
+
 .menuIcons{
     float: right;
     margin-left: 24px;
+    margin-right: 23px;
 }
 .searchIpt{
     width: 70%;
@@ -59,7 +68,7 @@
     box-shadow: 1px 2px 4px 0 rgba(0,0,0,0.5);
     text-align: center;
     position: fixed;
-    z-index: 99;
+    z-index: 3;
     bottom: 31px;
     right: 24px;
 }
@@ -144,6 +153,10 @@ h2{
 h4{
     color:  #FFFBF7;
     font-size: 14px;
+}
+
+.btnPostIcon{
+    display: table-cell; vertical-align: middle;
 }
 
 .favTitle{

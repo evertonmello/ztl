@@ -1,11 +1,11 @@
 <div class="menuContainer">
     <img class="avatar" (tap)="goToMyProfile()" src="./assets/img/avatar1.jpg" alt="profileImage" width="30" height="30">
     <h1 class="title">Início</h1>
-    <cooltz-icons [name]="'bell'" [width]="'25'" [color]="'white'" class="menuIcons"></cooltz-icons>
+    <notifications (evtShowNtfPrev)="setNtfView($event)" [showPreview]="blurHome"></notifications>    
     <cooltz-icons (tap)="search()" [name]="'search'" [width]="'25'" [color]="'white'" class="menuIcons">
     </cooltz-icons>
 </div>
-<mat-tab-group animationDuration="30ms" mat-stretch-tabs>
+<mat-tab-group animationDuration="30ms" mat-stretch-tabs [ngClass]="{'blur':blurHome}" (click)="hideNtfc()" >
     <mat-tab label="Música">
         <div class="block1 feed" >
            <div #feed class="feedContainer">
@@ -36,9 +36,9 @@
         <h1>Content 3</h1>
     </mat-tab>
 </mat-tab-group>
-<div class="btnPost">
+<div class="btnPost" [ngClass]="{'blur btn':blurHome}">
     <cooltz-icons (tap)="showOverlay();searchToPost(false, 'topic')"
-        style="display: table-cell; vertical-align: middle;" [name]="'pen'" [color]="'white'" [width]="'30'">
+        class="btnPostIcon" [name]="'pen'" [color]="'white'" [width]="'30'">
     </cooltz-icons>
 </div>
 <div *ngIf="overlay" (click)="showOverlay()" class="overlay">

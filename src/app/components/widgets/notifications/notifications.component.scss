@@ -1,0 +1,37 @@
+.ntfcContainer{
+    position: absolute;
+    top: -4px;
+    font-size: 12px;
+    left: 10px;
+    background-color: #F13B40;
+    width: 29px;
+    height: 16px;
+    text-align: center;
+    border-radius:8px;
+}
+
+.iconContainer{
+    display: inline-block;
+    position: relative;
+    float: right;
+}
+
+.seeAllTxt{
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin: 12px 0 12px 12px;
+}
+.ntfcDesc{
+    color: white;
+    font-size: 12px;
+}
+
+.preview{
+    background-color: #292727;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
