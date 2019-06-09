@@ -13,6 +13,10 @@
 .ctctNameContainer{
     display: inline-block;
     vertical-align: super;
+    white-space: nowrap;
+    width: 83%;                   
+    overflow: hidden;          
+    text-overflow:    ellipsis;
 }
 
 h2{
@@ -25,6 +29,17 @@ h3{
     margin: auto;
     color: #FFFBF7;
 }
+.ntfTxt{
+    font-weight: normal;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #BDB6B6;
+    white-space: nowrap;
+    width: 100%;                   
+    overflow: hidden;          
+    text-overflow:    ellipsis;
+}
+
 .name{
     display: inline-block;
     color: #FFFFFBF7;
@@ -46,7 +61,12 @@ h3{
     &.added{
         background-color: white;
     }
+
+    &.ntf{
+        height: 30px;
+    }
 }
+
 
 .addBtnTxt{
     margin: auto;

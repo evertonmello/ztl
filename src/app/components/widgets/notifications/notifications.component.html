@@ -5,6 +5,6 @@
   </div>
 </div>
 <div *ngIf="showPreview"  class="preview">
-  <notific-item *ngFor="let ntfcation of ntfcations" ></notific-item>
+  <notific-item *ngFor="let ntfcation of ntfcations" [item]="ntfcation" ></notific-item>
   <h1 (tap)="openAllNotfc()" class="seeAllTxt">Ver todas notificações</h1>
 </div>
