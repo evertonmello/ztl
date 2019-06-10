@@ -9,6 +9,7 @@ import { isNgTemplate } from '@angular/compiler';
 export class NotificItemComponent implements OnInit {
 
   @Input()item;
+  @Input()all = false;
   addContactTgl = false;
   contact = [{
     firstName: 'Everton',
