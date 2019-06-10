@@ -1,7 +1,11 @@
 .main{
     padding: 5px 20px 0 20px;    
-    height: 120px;
+    height: 90px;
     border-bottom: 1px solid #555251;
+
+    &.addCtn{
+        height: 110px;
+    }
 }
 .userContainer{
     display: inline-block;
@@ -18,6 +22,7 @@
 
 
 .ctctNameContainer{
+    position: relative;
     display: inline-block;
     vertical-align: super;
     white-space: nowrap;
@@ -52,49 +57,30 @@ h3{
     color: #FFFFFBF7;
     font-size: 16px;
 }
+
+.postTIme{
+    color: #BDB6B6;
+    font-weight: bold;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
 .nick{
     color: #BDB6B6;
     font-size: 14px;
 }
-.addBtn{
-    display: inline-flex;
-	height: 38px;
-	width: 100px;
-	border-radius: 5px;
-	background-color: rgba(241,59,64,1);
-    box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.5), 0 2px 4px 0 rgba(0,0,0,0.5);
-    float: left;
-    
-    &.added{
-        background-color: white;
-    }
-
-    &.ntf{
-        height: 30px;
-    }
-}
-
-
-.addBtnTxt{
-    margin: auto;
-    margin-top: 8px;
-    color: rgba(255,251,247,1);
-    font-size: 16px;
-
-    &.added{
-    	color: rgba(241,59,64,1);
-    }
-}
 
 
 .addBtn{
-    display: inline-block;
-	height: 38px;
+    display: table;
+    text-align: center;
+	height: 30px;
 	width: 100px;
 	border-radius: 5px;
 	background-color: rgba(241,59,64,1);
     box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.5), 0 2px 4px 0 rgba(0,0,0,0.5);
     float: right;
+    margin-right: 12px;
     
     &.added{
         background-color: white;
@@ -102,38 +88,13 @@ h3{
 }
 
 .addBtnTxt{
-    display: table;
+    display: table-cell;
+    vertical-align: middle;
     margin: auto;
     margin-top: 8px;
     color: rgba(255,251,247,1);
     font-size: 16px;
-
-    &.added{
-    	color: rgba(241,59,64,1);
-    }
-}
-
-.addBtn{
-    display: inline-block;
-	height: 38px;
-	width: 100px;
-	border-radius: 5px;
-	background-color: rgba(241,59,64,1);
-    box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.5), 0 2px 4px 0 rgba(0,0,0,0.5);
-    float: right;
     
-    &.added{
-        background-color: white;
-    }
-}
-
-.addBtnTxt{
-    display: table;
-    margin: auto;
-    margin-top: 8px;
-    color: rgba(255,251,247,1);
-    font-size: 16px;
-
     &.added{
     	color: rgba(241,59,64,1);
     }

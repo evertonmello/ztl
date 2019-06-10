@@ -7,7 +7,34 @@ import {Router} from '@angular/router'
 })
 export class AllNotificationsComponent implements OnInit {
 
-  ntfcations = ['as','acdas','dassda','acdas','acdas','dassda','acdas','acdas','dassda','acdas']
+
+  ntfcations = [{
+    type:0,
+    ntfc:"asddsadsa"
+  },
+  {
+    type:0,
+    ntfc:"asddsadsa"
+  },
+  {
+    type:1,
+    ntfc:""
+  },
+  {
+    type:0,
+    ntfc:"asddsadsa"
+  },
+  {
+    type:1,
+    ntfc:""
+  },{
+    type:0,
+    ntfc:"asddsadsa"
+  },
+  {
+    type:1,
+    ntfc:""
+  },]
   constructor(private router:Router) { }
 
   ngOnInit() {

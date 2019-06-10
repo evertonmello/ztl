@@ -1,11 +1,12 @@
-<div class="main">
+<div class="main" [ngClass]="{'addCtn':item.type == 1}" >
     <div class="userContainer">
         <img class="avatar" src="./assets/img/avatar1.jpg" alt="profileImage" width="38" height="38">
         <div class="ctctNameContainer">
             <h3 class="name">firstName</h3>
+            <h3 class="postTIme">3m</h3>
             <h3 class="ntfTxt">hahahah omeu o que vis daassad adsadsa dsadsa adsdsa ssda</h3>
-            <h3>Visualizar</h3>
-            <div style="display: inline-flex" >
+            <h3 *ngIf="item.type == 0" >Visualizar</h3>
+            <div *ngIf="item.type == 1" style="display: inline-flex" >
                 <div class="addBtn ntf">
                     <h2 class="addBtnTxt">Aceitar</h2>
                 </div>

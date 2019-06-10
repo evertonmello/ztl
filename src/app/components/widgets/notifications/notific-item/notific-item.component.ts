@@ -14,7 +14,8 @@ export class NotificItemComponent implements OnInit {
     firstName: 'Everton',
     nickname: '@tom'
   }]
-
+  ntfAddDesc = "Gostaria de te adicionar como amigo";
+  ntfPreview = "Hahaha meu, o que você tá falando?"
   constructor() { }
 
   ngOnInit() {
