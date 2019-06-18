@@ -9,7 +9,18 @@ import { Router } from '@angular/router'
 export class NotificationsComponent implements OnInit {
 
   notifcs = 23;
-  ntfcations = ['as','acdas','dassda','acdas']
+  ntfcations = [{
+    type:0,
+    ntfc:"asddsadsa"
+  },
+  {
+    type:0,
+    ntfc:"asddsadsa"
+  },
+  {
+    type:1,
+    ntfc:""
+  },]
   @Output()evtShowNtfPrev = new EventEmitter();
   @Input()showPreview = false;
   constructor(private router:Router) { }

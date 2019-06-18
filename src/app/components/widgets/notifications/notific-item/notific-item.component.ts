@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
+import { isNgTemplate } from '@angular/compiler';
 
 @Component({
   selector: 'notific-item',
@@ -7,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotificItemComponent implements OnInit {
 
+  @Input()item;
+  @Input()all = false;
   addContactTgl = false;
   contact = [{
     firstName: 'Everton',
     nickname: '@tom'
   }]
-
+  ntfAddDesc = "Gostaria de te adicionar como amigo";
+  ntfPreview = "Hahaha meu, o que você tá falando?"
   constructor() { }
 
   ngOnInit() {
