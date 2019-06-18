@@ -15,6 +15,7 @@ export class ProfileComponent implements OnInit {
   lasPage = ''
   selectedTab = 0
   myProfile = false;
+  showMenu = false;
   constructor(private _sanitizer: DomSanitizer,private activatedRoute:ActivatedRoute, private router:Router) {
     this.activatedRoute.queryParams.subscribe((params) =>{
       this.profileId = params.profileId
@@ -26,6 +27,10 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     window.scrollTo(0, 0)
+  }
+
+  setMenuView(){
+    this.showMenu = !this.showMenu;
   }
 
   getBackground(image, friendsFav) {
@@ -47,4 +52,8 @@ export class ProfileComponent implements OnInit {
     var page = this.myProfile? 'home': this.lasPage
     this.router.navigate([page], { queryParams: { selectedTab: this.selectedTab} });
   }
+
+  addNewFav(tab){
+    this.router.navigate(['search'], {queryParams: {coverView:'fav', tab: tab}})
+  } 
 }

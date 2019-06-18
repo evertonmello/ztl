@@ -23,6 +23,7 @@ import { NewPostComponent } from './components/new-post/new-post.component';
 import { PostViewComponent } from './components/post-view/post-view.component';
 import { ResultAllComponent } from './components/search/result-all/result-all.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { MenuProfileComponent } from './components/profile/menu-profile/menu-profile.component';
 import { SearchResultComponent } from './components/search/search-result/search-result.component';
 import { CooltzIconsComponent } from './components/widgets/cooltz-icons/cooltz-icons.component';
 import { BackHeaderComponent } from './components/widgets/back-header/back-header.component';
@@ -53,6 +54,7 @@ const appRoutes: Routes = [
     AddContactsComponent,
     NewPostComponent,
     AllNotificationsComponent,
+    MenuProfileComponent,
     BackHeaderComponent,
     HomeComponent,
     ProfileComponent,

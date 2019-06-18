@@ -34,7 +34,7 @@ export class SearchAComponent implements OnInit, AfterViewInit {
   resultPage = true;
   content = {
     title: '',
-    header: '',
+    header: 'Nova publicação',
     desc: ''
   }
   showSuggestions = false;
@@ -77,7 +77,7 @@ export class SearchAComponent implements OnInit, AfterViewInit {
   }
 
   setUpSearch(params){
-    if (params.coverView) { this.setSearchCover(params.coverView) }
+    if (params.coverView) { this.setSearchCover(params.coverView, params.tab) }
     this.selectedTab = params.selectedTab || 0;
     this.setTabItens(params.postSearch)
   }
@@ -100,7 +100,7 @@ export class SearchAComponent implements OnInit, AfterViewInit {
     this.resultPage = coverView ? false : true;
   }
 
-  setSearchCover(params) {
+  setSearchCover(params, tab) {
     switch (params) {
       case 'listen':
         this.content.title = "O QUE VOCÊ ESTÁ OUVINDO AGORA?"
@@ -126,6 +126,11 @@ export class SearchAComponent implements OnInit, AfterViewInit {
       case 'Listen':
         this.content.title = "NENHUM RESULTADO ENCONTRADO"
         this.content.desc = 'refine os termos de sua busca e tente novamente.'
+        break;
+      case 'fav':
+        this.content.title = "O QUE É QUE VOCÊ GOSTA?"
+        this.content.desc = 'Pesquise pelo nome do artista, albúm ou música.';
+        this.content.header = 'Adicionar Favorito (' + tab + ')'
         break;
 
       default:

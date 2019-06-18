@@ -1,0 +1,46 @@
+.container{
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    &.main{
+        position: fixed;
+    }
+
+    &.rel{
+        position: relative;
+    }
+}
+
+.buttonsCtn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    margin: -30% 0 0 -37%;
+    box-shadow: #33000000 2px 3px 5px 0;
+    border-radius: 5px;
+    display: inline-grid;
+    background-color: #292727;
+}
+
+.optText:first-child{
+    border: 0;
+}
+
+.optText{
+    font-size: 16px;
+    color: #FFFFFBF7;
+    font-family: HKGrotesk;
+    font-weight: bold;
+    vertical-align: middle;
+    display: table-cell;
+    padding-left: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-top: #555251 solid 1px;
+    z-index: 99;
+}

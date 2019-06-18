@@ -1,6 +1,6 @@
 <!-- capa da busca (o que está buscando) -->
 <div *ngIf="!resultPage">
-    <back-header (back)="backPage()" [shadow]="true" [title]="'Nova publicação'"></back-header>
+    <back-header (back)="backPage()" [shadow]="true" [title]="content.header"></back-header>
     <h1 class="title">{{content.title}}</h1>
     <div class="iptBox">
         <input type="text" #ipt autofocus class="inputResult">
