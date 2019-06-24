@@ -39,11 +39,19 @@
             </div>
         </div>
       </div>
-      <div class="locked">
+      <div *ngIf="!myProfile"  class="locked">
           <h3 class="lockedDesc"> <cooltz-icons [name]="'lock'"[width]="'40'" [color]="'#BDB6B6'" class="icoLock"></cooltz-icons>
             Você só pode ver as postagens de seus amigos.
           </h3>
       </div>
+      <div *ngIf="myProfile" class="block1 feed" >
+        <h2 *ngIf="myProfile" class="favTitile">Minhas Postagens</h2>
+        <div #myPosts class="feedContainer">
+             <div *ngFor="let card of cards;"  (swiperight)="swipe('right feed')" (swipeleft)="swipe('left')" [style.touch-action]="'pan-y'" class="card">
+                     <app-card [avatarUrl]="card"></app-card>
+             </div>
+         </div>
+     </div>
     </mat-tab>
     <mat-tab label="Cinema"></mat-tab>
     <mat-tab label="Literatura"></mat-tab>

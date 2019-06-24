@@ -20,6 +20,7 @@
     display: flex;
     margin-left: 24px;
     margin-top: 15px;
+    position: relative;
 }
 
 .sugContainer:last-child{
@@ -121,3 +122,19 @@ input{
     color: #BDB6B6;
     margin-left: 24px;
 }
+
+.saveBtn{
+    width: 100px;
+    background-color: #F13B40;
+    height: 25px;
+    border-radius: 5px;
+    font-family: HKGrotesk;
+    text-align: center;
+    padding-top: 5px;
+    color: white;
+    box-shadow: black 0 2px 4px 0;
+    height: 30px;
+    position: absolute;
+    right: 24px;
+}
+

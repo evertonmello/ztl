@@ -18,6 +18,9 @@
                     <h2 class="itemName">{{suggestion.name}}</h2>
                     <h3 *ngIf="suggestion.desc" class="itemDesc">{{suggestion.desc}}</h3>
                 </div>
+                <div *ngIf="fav"  class="saveBtn">
+                    Favorito
+                </div>
             </div>
         </div>
     </div>

@@ -37,7 +37,9 @@ export class SearchAComponent implements OnInit, AfterViewInit {
     header: 'Nova publicação',
     desc: ''
   }
+  fav = false;
   showSuggestions = false;
+  lastPage = 'home'
   searchCategories = [];
   suggestionsNames = ['generic', 'songs', 'movies']
   suggestions = {
@@ -131,6 +133,9 @@ export class SearchAComponent implements OnInit, AfterViewInit {
         this.content.title = "O QUE É QUE VOCÊ GOSTA?"
         this.content.desc = 'Pesquise pelo nome do artista, albúm ou música.';
         this.content.header = 'Adicionar Favorito (' + tab + ')'
+        this.showSuggestions = true;
+        this.fav = true;
+        this.lastPage = 'profile'
         break;
 
       default:
@@ -142,7 +147,7 @@ export class SearchAComponent implements OnInit, AfterViewInit {
   }
 
   backPage() {
-    this.router.navigateByUrl('home')
+    this.router.navigateByUrl(this.lastPage)
   }
   search() {
     this.resultPage = true;
