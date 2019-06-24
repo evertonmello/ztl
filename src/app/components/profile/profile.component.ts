@@ -16,18 +16,31 @@ export class ProfileComponent implements OnInit {
   selectedTab = 0
   myProfile = false;
   showMenu = false;
+  invate = false;
+  isMyFriend = false;
   constructor(private _sanitizer: DomSanitizer,private activatedRoute:ActivatedRoute, private router:Router) {
     this.activatedRoute.queryParams.subscribe((params) =>{
-      this.profileId = params.profileId
-      this.lasPage = params.lastPage;
-      this.selectedTab = params.selectedTab
-      this.myProfile = params.myProfile || false;
+      this.manageParams(params);
     })
    }
 
   ngOnInit() {
     window.scrollTo(0, 0)
   }
+
+  manageParams(params){
+    this.profileId = params.profileId
+    this.lasPage = params.lastPage;
+    this.selectedTab = params.selectedTab
+    this.myProfile = params.myProfile || false;
+
+    if(params.showEditMenu){
+      this.showMenu = true;
+      this.myProfile = true;
+    }
+  }
+
+  
 
   setMenuView(){
     this.showMenu = !this.showMenu;
@@ -49,7 +62,7 @@ export class ProfileComponent implements OnInit {
   }
 
   backPage(){
-    var page = this.myProfile? 'home': this.lasPage
+    var page = this.myProfile? 'home': this.lasPage;
     this.router.navigate([page], { queryParams: { selectedTab: this.selectedTab} });
   }
 

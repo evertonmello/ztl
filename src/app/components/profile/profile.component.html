@@ -12,10 +12,17 @@
     </div>
     <cooltz-icons (tap)="setMenuView()" [name]="'menu'" [width]="'30'" [color]="'white'" class="menuIco"></cooltz-icons>
 </div>
-<button class="addBtn" [ngClass]="{'blur':showMenu}">
+<div *ngIf="invate" >
+    <button class="addBtn" [ngClass]="{'blur':showMenu}">
+        <h2 class="addBtnTxt" >Aceitar</h2>
+    </button>
+    <button class="addBtn added" [ngClass]="{'blur':showMenu}">
+        <h2 class="addBtnTxt added" >Recusar</h2>
+    </button>
+</div>
+<button *ngIf="!isMyFriend && !myProfile"  class="addBtn" [ngClass]="{'blur':showMenu}">
     <h2 class="addBtnTxt" >Adicionar</h2>
 </button>
-
 <mat-tab-group mat-stretch-tabs [ngClass]="{'blur':showMenu}">
     <mat-tab label="Música">
       <div style="margin: 24px">
@@ -42,4 +49,4 @@
     <mat-tab label="Literatura"></mat-tab>
 
 </mat-tab-group>
-<menu-profile *ngIf="showMenu" (closeMenu)="setMenuView()" ></menu-profile>
+<menu-profile *ngIf="showMenu" [showMenu]="showMenu" (closeMenu)="setMenuView()" ></menu-profile>

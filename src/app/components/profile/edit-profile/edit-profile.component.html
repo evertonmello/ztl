@@ -1,0 +1,30 @@
+<div>
+  <div class="barContainer">
+    <cooltz-icons (tap)="close()" [name]="'clear'" [width]="'25'" [color]="'white'" class="icoClose"></cooltz-icons>
+    <h3>Editar Pefil</h3>
+    <div class="saveBtn">
+      Salvar
+    </div>
+  </div>
+  <div style="text-align: center; margin-bottom: 10px">
+    <img class="avatar" width="200" height="200" src="./assets/img/avatar3.jpg" alt="">
+  </div>
+  <div  style="text-align: center;">
+    <h3>Trocar foto</h3>
+    <div id="post" ></div>
+  </div>
+  <form [formGroup]="profile" (ngSubmit)="onSubmit()" class="form" >
+    <label>Nome</label>
+    <input type="text" formControlName="name">
+    <label>Sobrenome  </label>
+    <input type="text" formControlName="lastName">
+    <label>Nome de Usuário</label>
+    <input type="text" formControlName="userName">
+    <label>Data de Nascimento</label>
+    <input type="date" data-date-format="DD MMMM YYYY" formControlName="birthDate" (onChange)="showDate()" >
+    <label>Descrição</label>
+    <input type="text" formControlName="desc">
+    <label>Do que prefere ser chamado</label>
+    <input type="text" formControlName="nickName">
+  </form>
+</div>

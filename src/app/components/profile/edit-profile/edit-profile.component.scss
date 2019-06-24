@@ -1,0 +1,76 @@
+.avatar{
+    border-radius: 50%;
+}
+
+h3{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form{
+    margin: 10px 24px 0 24px;
+}
+
+label{
+    font-family: HKGrotesk;
+    color: #BDB6B6;
+}
+
+.barContainer{
+    font-family: HKGrotesk;
+    height: 52px;
+    width: 100%;
+    box-shadow:black 1px 2px 2px 0;
+    color: #E9E2E1;
+}
+.changePic{
+    margin-top: -30px;
+    opacity: 0;
+}
+.icoClose{
+    vertical-align: -30%;
+    margin-top: 15px;
+    margin-left: 10px;
+    display: inline-block;
+}
+.saveBtn{
+    width: 80px;
+    background-color: #F13B40;
+    height: 25px;
+    border-radius: 5px;
+    font-family: HKGrotesk;
+    text-align: center;
+    padding-top: 5px;
+    color: white;
+    box-shadow: black 0 2px 4px 0;
+    float: right;
+    margin-top: 10px;
+    margin-right: 24px;
+}
+
+
+:host /deep/ .ql-snow.ql-toolbar button, .ql-snow .ql-toolbar button{
+    opacity: 0;
+    width: 100px;
+    margin-top: -42px;
+    height: 1px;
+    border: 0;
+}
+
+:host /deep/ .ql-toolbar.ql-snow{
+    opacity: 0;
+    height: 1px;
+    border: 0;
+}
+:host /deep/ .ql-toolbar.ql-snow + .ql-container.ql-snow{
+    border: 0;
+    height: 1px;
+}
+:host /deep/ .ql-editor{
+    display: none;
+}

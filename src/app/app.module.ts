@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule  } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
 import {MaterialModule} from './material.module';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -21,6 +21,7 @@ import { ListContactComponent } from './components/list-contact/list-contact.com
 import { SearchAComponent } from './components/search/search.component';
 import { NewPostComponent } from './components/new-post/new-post.component';
 import { PostViewComponent } from './components/post-view/post-view.component';
+import { EditProfileComponent} from './components/profile/edit-profile/edit-profile.component'
 import { ResultAllComponent } from './components/search/result-all/result-all.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { MenuProfileComponent } from './components/profile/menu-profile/menu-profile.component';
@@ -34,6 +35,7 @@ const appRoutes: Routes = [
   { path: 'addContacts',      component: AddContactsComponent ,data: {animation: 'addContactsPage'} },
   { path: 'login',      component: LoginComponent,data: {animation: 'loginPage'} },
   { path: 'profile',      component: ProfileComponent,data: {animation: 'profile'} },
+  { path: 'edit-profile',      component: EditProfileComponent,data: {animation: 'edit-profile'} },
   { path: 'notifications',      component: AllNotificationsComponent,data: {animation: 'notifications'} },
   { path: 'newPost',      component: NewPostComponent,data: {animation: 'newPost'} },
   { path: 'postView',      component: PostViewComponent,data: {animation: 'postView'} },
@@ -58,9 +60,11 @@ const appRoutes: Routes = [
     BackHeaderComponent,
     HomeComponent,
     ProfileComponent,
+
     PostViewComponent,
     CardComponent,
     NotificItemComponent,
+    EditProfileComponent,
     NotificationsComponent,
     ResultAllComponent,
     ListContactComponent,
@@ -70,8 +74,10 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     MaterialModule,
+    MatDatepickerModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes)

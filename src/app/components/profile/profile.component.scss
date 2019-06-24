@@ -81,7 +81,9 @@
     border: 0;
     float: unset;
     margin-left: 24px;
-
+    &.added{
+        background-color: white;
+    }
 }
 
 .locked{
