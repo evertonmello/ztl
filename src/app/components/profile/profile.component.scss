@@ -136,7 +136,23 @@
     transition: all 300ms;
 }
 
-
+.friendTag{
+    width: 94px;
+    font-size: 11px;
+    background-color: #F44B4F;
+    height: 17px;
+    border-radius: 5px;
+    text-align: center;
+    display: table;
+    margin-bottom: 5px;
+}
+.friendTagTxt{
+    font-family: HKGrotesk;
+    font-size: 9px;
+    color: white;
+    vertical-align: middle;
+    display: table-cell;
+}
 .block1 {
     overflow:auto;
     display: block;

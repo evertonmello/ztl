@@ -10,7 +10,7 @@
         <div class="block1 feed" >
            <div #feed class="feedContainer">
                 <div *ngFor="let card of cards;"  (swiperight)="swipe('right feed')" (swipeleft)="swipe('left')" [style.touch-action]="'pan-y'" class="card">
-                        <app-card [avatarUrl]="card"></app-card>
+                        <!-- <app-card [avatarUrl]="card"></app-card> -->
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
             <div class="friendsFavorites">
                 <div *ngFor="let friendsFav of friendsFavs" [style.background-image]="getBackground(url)"
                     class="favItem">
-                    <img class="avatar fav" src="./assets/img/avatar3.jpg" alt="profileImage" width="30" height="30">
+                    <!-- <img class="avatar fav" src="./assets/img/avatar3.jpg" alt="profileImage" width="30" height="30"> -->
                 </div>
             </div>
         </div>
