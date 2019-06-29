@@ -27,6 +27,7 @@ export class AppComponent {
   }
 
 
+
   ngOnInit() {
     this.logged = window.localStorage.getItem('isLogged')? JSON.parse(window.localStorage.getItem('isLogged')):false;
     if(this.logged ){
